@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.QC_View.ListDefectDone"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button FontFamily="MaterialIconsOutlinedRegular" 
+                        x:Name="back"
+                        FontSize="Medium" 
+                        Text="&#xe5cd;" 
+                        TextColor="White"
+                        BackgroundColor="Red"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Clicked="back_Clicked">
+                    
+                </Button>
+            </StackLayout>
+            
+                <StackLayout>
+                    <Label Text="Bảng Chi Tiết Lỗi Sản Phẩm" TextColor="Green" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large"/>
+                    <Label Text="" x:Name="PersonName" HorizontalOptions="EndAndExpand" TextColor="Blue" FontSize="20" FontAttributes="Bold" Padding="5"></Label>
+                    <Grid BackgroundColor="Green" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="{xct:Translate Defect}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+
+                        <Label Grid.Row="0" Grid.Column="1" Text="{xct:Translate Details}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+
+                        <Label Grid.Row="0" Grid.Column="2" Text="{xct:Translate Location}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
+
+                        <Label Grid.Row="0" Grid.Column="3" Text="{xct:Translate Img}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+
+                        <!--<Label Text="{xct:Translate Repair}" Grid.Column="4"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />-->
+                    </Grid>
+
+                    <RefreshView x:Name="refreshList" RefreshColor="Cyan" Refreshing="refreshList_Refreshing">
+                        <ScrollView>
+                            <ListView x:Name="SewingDefectList" HasUnevenRows="True">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <SwipeView>
+                                                    <SwipeView.RightItems>
+                                                        <SwipeItem Text="Person"
+                                                                       x:Name="person"
+                                                                       Clicked="person_Clicked"
+                                                                       IconImageSource="person.png"
+                                                                       BackgroundColor="LightBlue"
+                                                                       CommandParameter="{Binding xID}">
+                                                        </SwipeItem>
+                                                        <SwipeItem Text="{xct:Translate Img}"
+                                                                       
+                                                                           Clicked="Image_Button"
+                                                                           IconImageSource="eye.png"
+                                                                           BackgroundColor="LightBlue"
+                                                                           CommandParameter="{Binding .}">
+                                                        </SwipeItem>
+                                                </SwipeView.RightItems>
+                                                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                        <Frame BackgroundColor="Transparent" VerticalOptions="Fill" Padding="0">
+                                                            <Grid ColumnSpacing="0">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="3*"/>
+                                                                    <ColumnDefinition Width="4*"/>
+                                                                    <ColumnDefinition Width="3*"/>
+                                                                    <ColumnDefinition Width="2*"/>
+                                                                    
+                                                                </Grid.ColumnDefinitions>
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="*"/>
+                                                                </Grid.RowDefinitions>
+
+                                                                <Frame Grid.Column="0" BackgroundColor="{Binding DefectCauseColor}" BorderColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+                                                                    <ScrollView>
+                                                                        <Label Text="{Binding DefectCauseVN}" TextColor="White" FontAttributes="Bold" FontSize="15">
+                                                                            <Label.Triggers>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Yellow">
+                                                                                    <Setter Property="TextColor" Value="Black"></Setter>
+                                                                                </DataTrigger>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                                    <Setter Property="TextColor" Value="Red"></Setter>
+                                                                                </DataTrigger>
+                                                                            </Label.Triggers>
+                                                                        </Label>
+                                                                    </ScrollView>
+                                                                    <Frame.Triggers>
+                                                                        <DataTrigger TargetType="Frame" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                            <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                                                        </DataTrigger>
+                                                                    </Frame.Triggers>
+
+                                                                </Frame>
+
+                                                                <Frame Grid.Column="1" BackgroundColor="{Binding DefectCauseColor}" BorderColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                                                    <ScrollView>
+                                                                        <Label Text="{Binding ReasonVN}" TextColor="White" FontAttributes="Bold" FontSize="15">
+                                                                            <Label.Triggers>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Yellow">
+                                                                                    <Setter Property="TextColor" Value="Black"></Setter>
+                                                                                </DataTrigger>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                                    <Setter Property="TextColor" Value="Red"></Setter>
+                                                                                </DataTrigger>
+                                                                            </Label.Triggers>
+                                                                        </Label>
+                                                                    </ScrollView>
+                                                                    <Frame.Triggers>
+                                                                        <DataTrigger TargetType="Frame" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                            <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                                                        </DataTrigger>
+                                                                    </Frame.Triggers>
+                                                                </Frame>
+                                                                
+                                                                <Frame Grid.Column="2" BackgroundColor="{Binding DefectCauseColor}" BorderColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                                                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                                        <Label Text="{xct:Translate Inside} " TextColor="White" FontAttributes="Bold" FontSize="15">
+                                                                            <Label.Triggers>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding ImageID}" Value="Front">
+                                                                                    <Setter Property="Text" Value="{xct:Translate Outside}"></Setter>
+                                                                                </DataTrigger>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Yellow">
+                                                                                    <Setter Property="TextColor" Value="Black"></Setter>
+                                                                                </DataTrigger>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                                    <Setter Property="TextColor" Value="Red"></Setter>
+                                                                                </DataTrigger>
+                                                                            </Label.Triggers>
+                                                                        </Label>
+                                                                        <Label Text="{Binding PartNameVN} " TextColor="White" FontAttributes="Bold" FontSize="15">
+                                                                            <Label.Triggers>
+
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Yellow">
+                                                                                    <Setter Property="TextColor" Value="Black"></Setter>
+                                                                                </DataTrigger>
+                                                                                <DataTrigger TargetType="Label" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                                    <Setter Property="TextColor" Value="Red"></Setter>
+                                                                                </DataTrigger>
+                                                                            </Label.Triggers>
+                                                                        </Label>
+                                                                    </StackLayout>
+
+                                                                    <Frame.Triggers>
+                                                                        <DataTrigger TargetType="Frame" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                            <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                                                        </DataTrigger>
+                                                                    </Frame.Triggers>
+                                                                </Frame>
+
+                                                                <Frame Grid.Column="3" BackgroundColor="{Binding DefectCauseColor}"
+                                                                   BorderColor="White"
+                                                                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                                                    <ImageButton x:Name="ckbsttus" 
+                                                                          IsEnabled="True"
+                                                                          Clicked="ckbsttus_Clicked"
+                                                                          VerticalOptions="Center"
+                                                                          BackgroundColor="Transparent"
+                                                                          Source="returnDefect.png"
+                                                                          BindingContext="{Binding .}">
+                                                                        
+                                                                    </ImageButton>
+                                                                    <Frame.Triggers>
+                                                                        <DataTrigger TargetType="Frame" Binding="{Binding DefectCauseColor}" Value="Grey">
+                                                                            <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                                                        </DataTrigger>
+                                                                    </Frame.Triggers>
+                                                                </Frame>
+                                                            </Grid>
+                                                        </Frame>
+                                                    </StackLayout>
+
+                                                </SwipeView>
+
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ScrollView>
+                    </RefreshView>
+                </StackLayout>
+         
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

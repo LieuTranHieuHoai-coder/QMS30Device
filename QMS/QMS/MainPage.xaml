@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.MainPage" BackgroundColor="#83be62"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout x:Name="PanalLogo" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="100">
+            <StackLayout HorizontalOptions="FillAndExpand"></StackLayout>
+            
+            <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" VerticalOptions="Center">
+                <ImageButton x:Name="BtnEnglish" Clicked="BtnEnglish_Clicked" Source="unitedstates32" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton x:Name="BtnVietnamese" Clicked="BtnVietnamese_Clicked" Source="vietnam32" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton x:Name="BtnTaiwanese" Clicked="BtnTaiwanese_Clicked" Source="taiwan32" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton x:Name="BtnChinese" Clicked="BtnChinese_Clicked" Source="china32" BackgroundColor="Transparent"></ImageButton>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout x:Name="StackLoginForm" VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
+            
+            <Image x:Name="ImgLogo" HeightRequest="150" HorizontalOptions="Center" Source="logoLogin.png" />
+            <Label Text="{xct:Translate Loginsystem}" 
+               TextColor="White"
+               FontSize="Medium"
+               FontAttributes="Bold,Italic"
+               
+               HorizontalOptions="CenterAndExpand"/>
+            <!--<Label Text="QMS" 
+                          FontSize="100" 
+                          HorizontalOptions="Center" 
+                          TextColor="White" 
+                          TextTransform="Uppercase" 
+                          FontAttributes="Bold"
+               FontFamily="Bodoni"/>-->
+            <Frame BackgroundColor="#BFcecece" HasShadow="False"  VerticalOptions="Fill" BorderColor="Yellow" CornerRadius="5" Opacity="0.7">
+                <StackLayout Spacing="10" Orientation="Vertical">
+                    <Label Text="{xct:Translate Username}" FontAttributes="Bold" TextColor="White"></Label>
+                    <Entry x:Name="txtuser" Keyboard="Text" TextTransform="Lowercase"
+                       xct:SetFocusOnEntryCompletedBehavior.NextElement="{x:Reference txtpassword}"
+                   TextColor="Blue" Placeholder="{xct:Translate Username}"/>
+                    <Label Text="{xct:Translate Password}" FontAttributes="Bold" TextColor="White"></Label>
+
+                    <Entry IsPassword="True" 
+                       TextColor="Black" 
+                       Placeholder="{xct:Translate Password}" 
+                       x:Name="txtpassword"
+                       Completed="Btnlogin_ClickedAsync"/>
+
+                    <Image  HorizontalOptions="End" VerticalOptions="Center">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ShowPass" NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button x:Name="btnlogin" Text="{xct:Translate Login}" BorderWidth="1" 
+                    BorderColor="Red" 
+                    ImageSource="leftarr"
+                    
+                    WidthRequest="150"  
+                    BackgroundColor="White"
+                    CornerRadius="10"
+                    TextColor="Red" Clicked="Btnlogin_ClickedAsync">
+                </Button>
+                <Button x:Name="btnloginQR" Text="{xct:Translate ScanQRcode}" BorderWidth="1" 
+                    BorderColor="Red" 
+                    ImageSource="qrcode"                    
+                    WidthRequest="150"  
+                    BackgroundColor="White"
+                    CornerRadius="10"
+                    TextColor="Red" Clicked="btnloginQR_Clicked">
+                </Button>
+                <!--<Button Text="quay Lại" x:Name="btnexit" 
+                        BorderColor="Red" 
+                        ImageSource="back"                   
+                        
+                        BackgroundColor="White"
+                        CornerRadius="10"
+                        TextColor="Red"/>-->
+            </StackLayout>            
+            
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                <Label Text="© 2022 Quảng Việt Củ Chi" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+                <Label x:Name="lbltime" TextColor="Brown" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontAttributes="Bold"/>
+
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>   
+</ContentPage>

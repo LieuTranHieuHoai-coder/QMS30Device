@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.QC_View.ShowImage"
+             xmlns:local="clr-namespace:QMS"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <local:PinchToZoomContainer x:Name="boxImage" Grid.Row="0">
+                <local:PinchToZoomContainer.Content>
+                    <Image x:Name="MyImage" Aspect="AspectFill"></Image>
+                </local:PinchToZoomContainer.Content>
+            </local:PinchToZoomContainer>
+
+            <ImageButton Grid.Row="0" Source="close2" x:Name="backbtn" Clicked="backbtn_Clicked" 
+                        VerticalOptions="Start" HorizontalOptions="End"
+                        WidthRequest="50" HeightRequest="50" Margin="20"
+                         BackgroundColor="White" Opacity="0.5"></ImageButton>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

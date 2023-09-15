@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+               xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+             x:Class="QMS.QC_View.PopupTotalDefect">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"           
+            DurationIn="200"
+            DurationOut="100"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout BackgroundColor="White"
+                 Padding="10" 
+                 Margin="10"
+                 VerticalOptions="Start">
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="{xct:Translate Detailsofproductdefects}" Grid.Column="0" x:Name="ParentName" HorizontalTextAlignment="Start"
+                   TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="Start"></Label>
+                <Button Text="&#xe5cd;" Grid.Column="1" FontFamily="MaterialIconsOutlinedRegular" HorizontalOptions="End" VerticalOptions="Start"
+                    FontSize="20" x:Name="close" Clicked="close_Clicked"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="Red" WidthRequest="40" 
+                    HeightRequest="40">
+
+                </Button>
+            </Grid>
+
+        </StackLayout>
+        <StackLayout >
+            <FlexLayout AlignItems="Center" AlignContent="Center" Margin="5,0,5,0"
+                                 BindableLayout.ItemsSource="{Binding defect}"                
+                                 HorizontalOptions="CenterAndExpand"
+                                 Wrap="Wrap"
+                                x:Name="listTotalDefect"
+                                >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" WidthRequest="160">
+                            <Label Text="{Binding DefineCode}" TextColor="Black" FontSize="20" FontAttributes="Bold"></Label>
+                            <Label Text=" : " TextColor="Black" FontSize="20" FontAttributes="Bold"></Label>
+                            <Label Text="{Binding Total}" TextColor="Black" FontSize="20" FontAttributes="Bold"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

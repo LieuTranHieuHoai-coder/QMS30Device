@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.Reports.DailyReportPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="40" Orientation="Horizontal" BackgroundColor="LightGreen">
+                <Label Text="{xct:Translate DailyReportTitle}" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand" 
+                       VerticalOptions="EndAndExpand"
+                       FontSize="30" TextColor="Blue"></Label>
+                <ImageButton x:Name="ButtonClose" Clicked="ButtonClose_Clicked" Source="close1" WidthRequest="40" HorizontalOptions="End" Margin="0" BackgroundColor="Transparent"></ImageButton>
+            </StackLayout>
+            <FlexLayout Wrap="Wrap" BackgroundColor="White" Margin="2,0,2,0" AlignContent="SpaceEvenly" AlignItems="Center" JustifyContent="SpaceEvenly">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xebcc;" TextColor="#ff1493" FontSize="20"  FontFamily="MaterialIconsOutlinedRegular" VerticalTextAlignment="Center"></Label>
+                    <DatePicker x:Name="DPFrom" WidthRequest="120"></DatePicker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xebcc;" TextColor="#ff1493" FontSize="20"  FontFamily="MaterialIconsOutlinedRegular" VerticalTextAlignment="Center"></Label>
+                    <DatePicker x:Name="DPTo" WidthRequest="120"></DatePicker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xebbc;" TextColor="#ff1493" FontSize="20"  FontFamily="MaterialIconsOutlinedRegular" VerticalTextAlignment="Center"></Label>
+                    <Picker x:Name="PickerFactory" Title="{xct:Translate SelectFactory}" SelectedIndexChanged="PickerFactory_SelectedIndexChanged"
+                        ItemDisplayBinding="{Binding ProductionWorkShop}"></Picker>
+                </StackLayout>
+                
+                <!--<ImageButton Source="select48" BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30"></ImageButton>-->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xe583;" TextColor="#ff1493" FontSize="30"  FontFamily="MaterialIconsOutlinedRegular" VerticalTextAlignment="Center"></Label>
+                    <Picker x:Name="PickerLine" Title="{xct:Translate SelectLine}" ItemDisplayBinding="{Binding SewingLine}"
+                        SelectedIndexChanged="PickerLine_SelectedIndexChanged"></Picker>
+                </StackLayout>
+                
+                <!--<ImageButton Source="select48" BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30"></ImageButton>-->
+                <Button x:Name="ButtonQuery" ImageSource="search" Text="{xct:Translate Query}" 
+                        BackgroundColor="LightGreen" CornerRadius="10" HeightRequest="40"
+                        VerticalOptions="Center"
+                        Clicked="ButtonQuery_Clicked"></Button>
+                <Button x:Name="ButtonDefectCode" ImageSource="defect" Text="{xct:Translate ByDefectCode}" 
+                        BackgroundColor="LightGreen" CornerRadius="10" HeightRequest="40"
+                        VerticalOptions="Center"
+                        Clicked="ButtonDefectCode_Clicked"></Button>
+                <Button x:Name="ButtonDefectDetail" ImageSource="clothestpfg" Text="{xct:Translate Details}" 
+                        BackgroundColor="LightGreen" CornerRadius="10" HeightRequest="40"
+                        VerticalOptions="Center"
+                        Clicked="ButtonDefectDetail_Clicked"></Button>
+            </FlexLayout>
+            <StackLayout VerticalOptions="FillAndExpand" Margin="2,0,2,0">
+                <StackLayout HeightRequest="80" VerticalOptions="Start" Margin="0" Padding="0">
+                    <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*,*" RowDefinitions="*" BackgroundColor="Gray" VerticalOptions="FillAndExpand" Padding="2" ColumnSpacing="2">
+                        <Label Grid.Column="0" Text="{xct:Translate Date}" TextColor="Black" FontSize="15"    VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <!--<Label Grid.Column="1" Text="{xct:Translate SewingLine}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>-->
+                        <Label Grid.Column="1" Text="{xct:Translate Customer}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="2" Text="{xct:Translate Season}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="3" Text="{xct:Translate BuyMonth}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="4" Text="{xct:Translate Style}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <!--<Label Grid.Column="6" Text="{xct:Translate PO}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>-->
+                        <Label Grid.Column="5" Text="{xct:Translate Color}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="6" Text="{xct:Translate Size}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="7" Text="{xct:Translate Qty}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="8" Text="{xct:Translate PassQty}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="9" Text="{xct:Translate DefectQty}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                    </Grid>                    
+                </StackLayout>
+                <ScrollView Margin="0" Padding="0">
+                    <StackLayout HeightRequest="250">
+                        <CollectionView x:Name="DataViewer" EmptyView="{xct:Translate NoData}" SelectionMode="Single" Margin="0">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*,*" RowDefinitions="*" 
+                                      VerticalOptions="FillAndExpand" BackgroundColor="Gray" 
+                                      Padding="1" ColumnSpacing="1">
+                                        <Label Grid.Column="0" Text="{Binding CreateDated, StringFormat='{0:yyyy/MM/dd}'}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>
+                                        <!--<Label Grid.Column="1" Text="{Binding SewingLine}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>-->
+                                        <Label Grid.Column="1" Text="{Binding Customer}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>
+                                        <Label Grid.Column="2" Text="{Binding Season}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>
+                                        <Label Grid.Column="3" Text="{Binding BuyMonth}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>
+                                        <Label Grid.Column="4" Text="{Binding Style}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>
+                                        <!--<Label Grid.Column="6" Text="{Binding PONo}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}"></Label>-->
+                                        <Label Grid.Column="5" Text="{Binding ColorName}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}" HorizontalTextAlignment="Center"></Label>
+                                        <Label Grid.Column="6" Text="{Binding SizeName}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}" HorizontalTextAlignment="Center"></Label>
+                                        <Label Grid.Column="7" Text="{Binding Qty}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}" HorizontalTextAlignment="Center"></Label>
+                                        <Label Grid.Column="8" Text="{Binding PassQty}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}" HorizontalTextAlignment="Center"></Label>
+                                        <Label Grid.Column="9" Text="{Binding DefectQty}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="{Binding BgColor}" HorizontalTextAlignment="Center"></Label>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                    
+                </ScrollView>
+            </StackLayout>
+            <StackLayout HeightRequest="80" VerticalOptions="End" Margin="2,0,2,0" HorizontalOptions="Center" BackgroundColor="LightGreen">
+                <Grid ColumnDefinitions="*,*,*" RowDefinitions="*" BackgroundColor="LightGreen" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="CenterAndExpand">
+                        <Label VerticalTextAlignment="Center" Text="{xct:Translate Qty}" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label x:Name="LabelTotalQty" Text="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15" ></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                        <Label VerticalTextAlignment="Center" Text="{xct:Translate PassQty}" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label x:Name="LabelTotalPass" Text="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15" ></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="CenterAndExpand">
+                        <Label VerticalTextAlignment="Center" Text="{xct:Translate DefectQty}" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label x:Name="LabelTotalDefect" Text="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15" ></Label>
+                    </StackLayout>
+                    
+                </Grid>
+                <Grid ColumnDefinitions="*,*" RowDefinitions="*" BackgroundColor="LightGreen" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="CenterAndExpand">
+                        <Label VerticalTextAlignment="Center" Text="{xct:Translate passpercentage}" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label x:Name="LabelPercent" Text="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15" ></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                        <Label VerticalTextAlignment="Center" Text="{xct:Translate defectpercentage}" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label x:Name="LabelDefectPercent" Text="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Blue" FontAttributes="Bold" FontSize="15" ></Label>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+              x:Class="QMS.InOutside"
+                 x:Name="QMSInOutside">
+    <!--<ContentPage.Content>-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"           
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="FillAndExpand"  
+                 Padding="10" 
+                 Margin="10" HeightRequest="600">
+        <Frame CornerRadius="5" BorderColor="GreenYellow" HorizontalOptions="CenterAndExpand" Padding="20">
+               <StackLayout BackgroundColor="White" Padding="5"> 
+                 <Grid  BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.ColumnSpan="2" x:Name="txtdefect" TextColor="Black" Grid.Row="0" Text="{xct:Translate Choose}"  FontAttributes="Bold"/>
+                
+                    <Button Grid.Column="2"  x:Name="btnInside" Text="{xct:Translate Outside}" 
+                        Grid.Row="0" FontSize="Micro" 
+                        FontAttributes="Bold" BorderWidth="1" CornerRadius="8" BorderColor="Red" BackgroundColor="Green"
+                        TextColor="White"
+                        HeightRequest="20" WidthRequest="80"                      
+                        Clicked="btnOnside_Clicked" />
+                    <ImageButton x:Name="close" Source="close1.png"
+                             Grid.Column="3"
+                             Grid.Row="0"
+                             MinimumWidthRequest="0.5"
+                             HorizontalOptions="End" 
+                             BackgroundColor="Transparent"
+                             MinimumHeightRequest="0.5"          
+                             Clicked="close_Clicked"
+                            />
+            </Grid>
+            <!-- Button Layout -->
+
+                    <ScrollView >
+                        <FlexLayout x:Name="xEspecialidades"  AlignItems="Center" AlignContent="Center" Margin="5,0,5,0"
+                                         BindableLayout.ItemsSource="{Binding returns}"                
+                                         HorizontalOptions="CenterAndExpand"
+                                         Wrap="Wrap"
+                                        >
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Text="{Binding DefectBtn}" 
+                                            WidthRequest="200" Margin="5" 
+                                            BackgroundColor="{Binding Color}" 
+                                            CommandParameter="{Binding xID}"
+                                            Clicked="Button_Clicked" FontSize="14" 
+                                            BorderWidth="1" CornerRadius="5"
+                                            TextColor="White"></Button>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+                    </ScrollView>
+            </StackLayout>          
+      
+        </Frame>     
+     
+
+        <!--</Frame>-->
+    </StackLayout>
+</pages:PopupPage>

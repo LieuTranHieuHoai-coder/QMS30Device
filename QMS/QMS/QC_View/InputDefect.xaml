@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"      
+             x:Class="QMS.QC_View.InputDefect">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="CenterAndExpand">
+                <Label Text="{xct:Translate enter error information}" x:Name="title" VerticalOptions="CenterAndExpand" 
+                       FontSize="30" FontAttributes="Bold" TextColor="Red" TextDecorations="Underline"></Label>
+            </StackLayout>
+
+            <StackLayout Margin="15,0,15,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                <Label Text="{xct:Translate change line}" FontSize="15" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                <Label Text="{xct:Translate Style}" HorizontalOptions="Start" FontSize="15" WidthRequest="200" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Margin="5,0,15,0" WidthRequest="150">
+
+                    <Picker x:Name="PkSewingline" Title="" 
+                        SelectedIndexChanged="PkSewingline_SelectedIndexChanged"
+                        ItemDisplayBinding="{Binding SewingLine}"
+                       
+                        IsEnabled="True">
+                    </Picker>
+
+                </StackLayout>
+                
+                <StackLayout  Margin="0,15,25,0" HorizontalOptions="Start" >
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="Mùa: " TextColor="Green" FontSize="20" FontAttributes="Bold"></Label>
+                        <Label Text="" x:Name="SeasonName" TextColor="Green" FontSize="20" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                </StackLayout>
+                
+                <Frame BorderColor="Transparent" BackgroundColor="Transparent" Margin="0,0,15,0" WidthRequest="150" CornerRadius="12" Padding="5" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <!--<Label Text="" x:Name="styleName" TextColor="Green" FontSize="20" FontAttributes="Bold"></Label>-->
+                        <Picker x:Name="PkStyle" Title="" HorizontalOptions="StartAndExpand"
+                                SelectedIndexChanged="PkStyle_SelectedIndexChanged"
+                                WidthRequest="150"
+                                ItemDisplayBinding="{Binding Style}"
+                                IsEnabled="True">
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                        <StackLayout Margin="15,0,15,0">
+                            <Label Text="{xct:Translate Customer}"  FontSize="15" FontAttributes="Bold"></Label>
+                        </StackLayout>
+                        <Frame BorderColor="Green" BackgroundColor="Transparent" Margin="5,0,5,0" CornerRadius="12" Padding="15">
+                            <StackLayout>
+                                <Label Text="" x:Name="customer" TextColor="Green" FontSize="20" FontAttributes="Bold"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1">
+                        <StackLayout Margin="15,0,15,0">
+                            <Label Text="{xct:Translate BuyMonth}" FontSize="15" FontAttributes="Bold"></Label>
+                        </StackLayout>
+                        <Frame BorderColor="Green" BackgroundColor="Transparent" Margin="5,0,15,0" CornerRadius="12" Padding="15">
+                            <StackLayout>
+                                <Label Text="" x:Name="buyMonth" TextColor="Green" FontSize="20" FontAttributes="Bold"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout Margin="15,0,15,0">
+                <Label Text="{xct:Translate Color}" FontSize="15" FontAttributes="Bold"></Label>
+            </StackLayout>
+
+            <FlexLayout AlignItems="Center" AlignContent="Center" Margin="5,0,5,0"
+                                 BindableLayout.ItemsSource="{Binding returns}"                
+                                 HorizontalOptions="CenterAndExpand"
+                                 Wrap="Wrap"
+                                x:Name="listColor"
+                                >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding Color}"
+                                WidthRequest="160" Margin="5" 
+                                FontSize="14" x:Name="generateSize"
+                                Clicked="generateSize_Clicked"
+                                CommandParameter="{Binding Color}"
+                                BorderWidth="1" CornerRadius="5"
+                                TextColor="Black"></Button>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+
+            <StackLayout Margin="15,0,15,0">
+                <Label Text="{xct:Translate Size}" FontSize="15" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <FlexLayout AlignItems="Center" AlignContent="Center" Margin="5,0,5,0" x:Name="listSize"
+                                 BindableLayout.ItemsSource="{Binding sizes}"                
+                                 HorizontalOptions="CenterAndExpand"
+                                 Wrap="Wrap"
+                                >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding Size}" 
+                                WidthRequest="160" Margin="5" 
+                                FontSize="14" 
+                                x:Name="getSize"
+                                Clicked="getSize_Clicked"
+                                CommandParameter="{Binding Size}"
+                                BorderWidth="1" CornerRadius="5"
+                                TextColor="Black"></Button>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+            <StackLayout Margin="15,0,15,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="{xct:Translate Selected}" FontSize="15" FontAttributes="Bold"></Label>
+                <Label Text="" x:Name="StyleName" FontSize="15" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button BackgroundColor="Yellow"
+                            x:Name="scannedQrcode"
+                                IsEnabled="False"
+                            WidthRequest="250"
+                            BorderColor="Yellow" BorderWidth="1" 
+                            Margin="0" Text="{xct:Translate ScanQRcode}" 
+                            Clicked="scannedQrcode_Clicked"
+                            Grid.Column="0"
+                            FontAttributes="Bold" FontSize="15" 
+                            HeightRequest="60"
+                            TextColor="Black"></Button>
+                        <Button BackgroundColor="Green" WidthRequest="250"
+                                 Grid.Column="1"
+                                x:Name="back" Clicked="back_Clicked" 
+                                
+                                BorderColor="Green" BorderWidth="1" 
+                                Text="{xct:Translate Back}" 
+                                FontAttributes="Bold" FontSize="15" 
+                                HeightRequest="60"
+                                IsVisible="true"
+                                TextColor="White"></Button>
+                        
+                        
+                        
+                    </Grid>
+                </StackLayout>
+                <Button BackgroundColor="Green" 
+                    x:Name="getDefect" Clicked="getDefect_Clicked" 
+                    BorderColor="Green" BorderWidth="1" 
+                    Margin="0" Text="{xct:Translate catch the error}" 
+                    IsEnabled="False"
+                    IsVisible="False"
+                    FontAttributes="Bold" FontSize="15" 
+                    HeightRequest="60"
+                    TextColor="White"></Button>
+                <Button BackgroundColor="Blue" 
+                            x:Name="passDefect" Clicked="passDefect_Clicked" 
+                            BorderColor="Blue" BorderWidth="1" 
+                            Margin="0" Text="{xct:Translate PassRFT}" 
+                            IsEnabled="False"
+                            FontAttributes="Bold" FontSize="15" 
+                            HeightRequest="60"
+                            TextColor="White"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

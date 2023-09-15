@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACCOUNT_PW" xml:space="preserve">
+    <value>帐号或密码不正确！</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="beingrepaired" xml:space="preserve">
+    <value>正在修整</value>
+  </data>
+  <data name="BuyMonth" xml:space="preserve">
+    <value>Buy Month</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="CheckInternet" xml:space="preserve">
+    <value>检查网路连线！</value>
+  </data>
+  <data name="CheckQR" xml:space="preserve">
+    <value>检查二维码并修复错误</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="ChooseFactory" xml:space="preserve">
+    <value>选择车间厂</value>
+  </data>
+  <data name="ChooseSewingLine" xml:space="preserve">
+    <value>选择车缝产线</value>
+  </data>
+  <data name="ChooseSite" xml:space="preserve">
+    <value>选择厂区</value>
+  </data>
+  <data name="Cleanliness" xml:space="preserve">
+    <value>6-脏污</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="ConfirmRepair" xml:space="preserve">
+    <value>确认修复</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>客戶</value>
+  </data>
+  <data name="DailyProductionReport" xml:space="preserve">
+    <value>每日产量报表</value>
+  </data>
+  <data name="DailyReportTitle" xml:space="preserve">
+    <value>每日生产报表</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="DateRangeInvalid" xml:space="preserve">
+    <value>日期范围无效</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>瑕疵</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>明细</value>
+  </data>
+  <data name="Detailsofproductdefects" xml:space="preserve">
+    <value>产品瑕疵明细</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="ERROR_TRYAGAIN" xml:space="preserve">
+    <value>错误再试一次</value>
+  </data>
+  <data name="Exceeding_The_Amount" xml:space="preserve">
+    <value>超出数量</value>
+  </data>
+  <data name="FabricAccessory" xml:space="preserve">
+    <value>1-布料/3-配件</value>
+  </data>
+  <data name="Factory" xml:space="preserve">
+    <value>车间厂</value>
+  </data>
+  <data name="Finishgood" xml:space="preserve">
+    <value>成品</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="Function" xml:space="preserve">
+    <value>功能</value>
+  </data>
+  <data name="Img" xml:space="preserve">
+    <value>照片</value>
+  </data>
+  <data name="INPUTINFORMATION" xml:space="preserve">
+    <value>输入讯息</value>
+  </data>
+  <data name="InputQR" xml:space="preserve">
+    <value>输入二维码</value>
+  </data>
+  <data name="InputQRcode" xml:space="preserve">
+    <value>输入二维码</value>
+  </data>
+  <data name="Inside" xml:space="preserve">
+    <value>衣服內部</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="LOGINERROR" xml:space="preserve">
+    <value>登入错误</value>
+  </data>
+  <data name="Loginsystem" xml:space="preserve">
+    <value>登入系统</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="Logo_Label" xml:space="preserve">
+    <value>4-商标/5-标签</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>讯息</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>下一个</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>没有资料可显示</value>
+  </data>
+  <data name="NODEFONGARMENT" xml:space="preserve">
+    <value>服装无瑕疵</value>
+  </data>
+  <data name="NOPICTURE" xml:space="preserve">
+    <value>沒有照片</value>
+  </data>
+  <data name="NotFoundQRCode" xml:space="preserve">
+    <value>未找到二维码</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>订单号码</value>
+  </data>
+  <data name="Outside" xml:space="preserve">
+    <value>衣服外部</value>
+  </data>
+  <data name="PassQty" xml:space="preserve">
+    <value>合格品数量</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="permissiontothedevice" xml:space="preserve">
+    <value>授予设备相机权限</value>
+  </data>
+  <data name="PO" xml:space="preserve">
+    <value>PO</value>
+  </data>
+  <data name="QCDefect" xml:space="preserve">
+    <value>品检瑕疵</value>
+  </data>
+  <data name="QCRecieving" xml:space="preserve">
+    <value>品检接收</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>二维码</value>
+  </data>
+  <data name="QRNOTAVAILABLE" xml:space="preserve">
+    <value>二维码不可用</value>
+  </data>
+  <data name="QRPASSED" xml:space="preserve">
+    <value>二维码是已通过</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="QUERYDATA" xml:space="preserve">
+    <value>查询资料</value>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>修复</value>
+  </data>
+  <data name="RepairGarment" xml:space="preserve">
+    <value>服装修复</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>存档</value>
+  </data>
+  <data name="Scan" xml:space="preserve">
+    <value>扫瞄</value>
+  </data>
+  <data name="SCANNED" xml:space="preserve">
+    <value>已扫描</value>
+  </data>
+  <data name="ScanQRcode" xml:space="preserve">
+    <value>扫瞄二维码</value>
+  </data>
+  <data name="ScanQRLogin" xml:space="preserve">
+    <value>扫瞄二维码登入</value>
+  </data>
+  <data name="ScanQRQMS" xml:space="preserve">
+    <value>扫瞄二维码-QMS</value>
+  </data>
+  <data name="ScanQRQMSQTY" xml:space="preserve">
+    <value>扫瞄二维码</value>
+  </data>
+  <data name="Seamseal_Bonding" xml:space="preserve">
+    <value>7-贴条/压合</value>
+  </data>
+  <data name="SearchItem" xml:space="preserve">
+    <value>搜索物品...</value>
+  </data>
+  <data name="Season" xml:space="preserve">
+    <value>季节</value>
+  </data>
+  <data name="SelectFactory" xml:space="preserve">
+    <value>选择车间厂</value>
+  </data>
+  <data name="SelectLine" xml:space="preserve">
+    <value>选择产线</value>
+  </data>
+  <data name="Semigood" xml:space="preserve">
+    <value>半成品</value>
+  </data>
+  <data name="SewingLine" xml:space="preserve">
+    <value>產線</value>
+  </data>
+  <data name="SewingOutput" xml:space="preserve">
+    <value>车缝产出</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>厂区</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>尺码</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>款式</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="UNABLETOGETINFOR" xml:space="preserve">
+    <value>无法获得资讯</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>使用者名称</value>
+  </data>
+  <data name="UserNameID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>使用者资料</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Workmanship_SPI" xml:space="preserve">
+    <value>2-工艺/9-针距</value>
+  </data>
+  <data name="WorkNo" xml:space="preserve">
+    <value>工作单号</value>
+  </data>
+  <data name="YesToConfirm" xml:space="preserve">
+    <value>按Yes确认</value>
+  </data>
+  <data name="YesToFinish" xml:space="preserve">
+    <value>按Yes完成</value>
+  </data>
+  <data name="YesToPass" xml:space="preserve">
+    <value>按Yes通过</value>
+  </data>
+  <data name="Front" xml:space="preserve">
+    <value>前片</value>
+  </data>
+  <data name="OVERQTY_NOTSAVE" xml:space="preserve">
+    <value>超过数量不可保存</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="FG" xml:space="preserve">
+    <value>FG</value>
+  </data>
+  <data name="PACKING" xml:space="preserve">
+    <value>PACKING</value>
+  </data>
+  <data name="SEMI" xml:space="preserve">
+    <value>SEMI</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>删除成功</value>
+  </data>
+  <data name="Dontfixthisdefect" xml:space="preserve">
+    <value>不要修复这个</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="NoWorkersToFix" xml:space="preserve">
+    <value>没有工人来修复错误</value>
+  </data>
+  <data name="QCJob" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="C_Grade" xml:space="preserve">
+    <value>C级</value>
+  </data>
+  <data name="Invalid Username or Password" xml:space="preserve">
+    <value>无效的用户名或密码</value>
+  </data>
+  <data name="ConfirmRework" xml:space="preserve">
+    <value>确认返工</value>
+  </data>
+  <data name="Numberofremakes" xml:space="preserve">
+    <value>翻拍次数</value>
+  </data>
+  <data name="switch camera" xml:space="preserve">
+    <value>切换相机</value>
+  </data>
+  <data name="QtyScan" xml:space="preserve">
+    <value>今天的数量</value>
+  </data>
+  <data name="AddNewSuccess" xml:space="preserve">
+    <value>添加成功</value>
+  </data>
+  <data name="change line" xml:space="preserve">
+    <value>换线</value>
+  </data>
+  <data name="enter error information" xml:space="preserve">
+    <value>输入错误信息</value>
+  </data>
+  <data name="catch the error" xml:space="preserve">
+    <value>捕获错误</value>
+  </data>
+  <data name="defect search" xml:space="preserve">
+    <value>缺陷搜索</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>已选择: </value>
+  </data>
+  <data name="Enter error code" xml:space="preserve">
+    <value>输入错误代码</value>
+  </data>
+  <data name="Add DetaiQcQrCode failed" xml:space="preserve">
+    <value>添加详细QcQrCode失败</value>
+  </data>
+  <data name="Add ProductionProcess failed" xml:space="preserve">
+    <value>添加生产流程失败</value>
+  </data>
+  <data name="C grade" xml:space="preserve">
+    <value>C级</value>
+  </data>
+  <data name="Passed product. Do you want to fix it?" xml:space="preserve">
+    <value>通过产品。你想修复它吗？</value>
+  </data>
+  <data name="product passed" xml:space="preserve">
+    <value>产品通过</value>
+  </data>
+  <data name="Qc is checking" xml:space="preserve">
+    <value>Qc正在检查</value>
+  </data>
+  <data name="Shirt C. Do you want to Recycle ?" xml:space="preserve">
+    <value>衬衫 C. 您想回收吗？</value>
+  </data>
+  <data name="color and size have not been entered" xml:space="preserve">
+    <value>颜色和尺寸尚未输入</value>
+  </data>
+  <data name="error fixed" xml:space="preserve">
+    <value>错误已修复</value>
+  </data>
+  <data name="Return failed" xml:space="preserve">
+    <value>返回失败</value>
+  </data>
+  <data name="Return successful" xml:space="preserve">
+    <value>返回成功</value>
+  </data>
+  <data name="worker is fixing" xml:space="preserve">
+    <value>工人正在修理</value>
+  </data>
+  <data name="give back" xml:space="preserve">
+    <value>回报</value>
+  </data>
+  <data name="QcCheckAgain" xml:space="preserve">
+    <value>再次进行质量检查</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>左边</value>
+  </data>
+  <data name="Mid" xml:space="preserve">
+    <value>中间</value>
+  </data>
+  <data name="MidLeft" xml:space="preserve">
+    <value>左中间</value>
+  </data>
+  <data name="MidRight" xml:space="preserve">
+    <value>右中间</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>右边</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="LeftRight" xml:space="preserve">
+    <value>左右边</value>
+  </data>
+  <data name="Repalce Fabric" xml:space="preserve">
+    <value>更換布料</value>
+  </data>
+  <data name="PassRFT" xml:space="preserve">
+    <value>Pass (RFT)</value>
+  </data>
+  <data name="DefectQty" xml:space="preserve">
+    <value>沒有實現</value>
+  </data>
+  <data name="passpercentage" xml:space="preserve">
+    <value>通過率</value>
+  </data>
+  <data name="ByDefectCode" xml:space="preserve">
+    <value>按缺陷代碼</value>
+  </data>
+  <data name="defectpercentage" xml:space="preserve">
+    <value>Defect Rate</value>
+  </data>
+</root>

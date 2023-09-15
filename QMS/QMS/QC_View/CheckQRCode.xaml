@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.QC_View.CheckQRCode"
+              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms" 
+             xmlns:tt="clr-namespace:TouchTracking">
+    <StackLayout>
+        
+        <StackLayout>
+            <RefreshView x:Name="refreshList" RefreshColor="Cyan" Refreshing="refreshList_Refreshing">
+                <ScrollView>
+                    <StackLayout>
+                        <!--Hình ảnh áo-->
+                        <!--<StackLayout VerticalOptions="StartAndExpand">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid BackgroundColor="White" x:Name="img_grid" Grid.Column="0" Grid.Row="0" IsEnabled="True">
+                                    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="White" VerticalOptions="FillAndExpand">
+
+                                        <Image  x:Name="img_front" BackgroundColor="White" 
+                                    HorizontalOptions="Center" 
+                                    VerticalOptions="FillAndExpand"
+                                    ></Image>
+                                    </StackLayout>
+
+                                    <skia:SKCanvasView x:Name="canvasView"/>
+                                    <Grid.Effects>
+                                        <tt:TouchEffect Capture="True"/>
+                                    </Grid.Effects>
+                                </Grid>
+                                <Grid BackgroundColor="White" x:Name="img_grid2" Grid.Column="1" Grid.Row="0" IsEnabled="True">
+                                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Image  x:Name="img_back" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+                                    </StackLayout>
+                                    <skia:SKCanvasView x:Name="canvasView2"/>
+                                    <Grid.Effects>
+                                        <tt:TouchEffect Capture="True"/>
+                                    </Grid.Effects>
+                                </Grid>
+                            </Grid>
+                        </StackLayout>-->
+
+                        <StackLayout >
+                            <Label Text="{xct:Translate  RepairGarment}" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" TextColor="Blue"/>
+                            <FlexLayout x:Name="QrInfomation"
+                                BindableLayout.ItemsSource="{Binding returns}"
+                                HorizontalOptions="FillAndExpand"
+                                Wrap="Wrap"
+                                VerticalOptions="StartAndExpand">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Padding="2">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                                <Label Text="{xct:Translate Customer}" FontSize="20" TextColor="Black"></Label>
+                                                <Label Text="{Binding Customer}" FontSize="20" TextColor="Blue" FontAttributes="Bold"></Label>
+                                                <Label Text="{xct:Translate Style}" FontSize="20" TextColor="Black"></Label>
+                                                <Label Text="{Binding Style}" FontSize="20" TextColor="Blue" FontAttributes="Bold"></Label>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                                <Label Text="{xct:Translate Color}" FontSize="20" TextColor="Black"></Label>
+                                                <Label Text="{Binding ColorName}" FontSize="20" TextColor="Blue" FontAttributes="Bold"></Label>
+                                                <Label Text="{xct:Translate Size}" FontSize="20" TextColor="Black"></Label>
+                                                <Label Text="{Binding SizeName}" FontSize="20" TextColor="Blue" FontAttributes="Bold"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+                            <ScrollView>
+                                <StackLayout>
+                                    <Label Text="{xct:Translate Detailsofproductdefects}" TextColor="Green" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <Label x:Name="infoStyle" FontSize="20" FontAttributes="Bold" TextColor="Green" Margin="10,0,0,0"></Label>
+                                        <Label x:Name="infoSeason" FontSize="20" FontAttributes="Bold" TextColor="Green" Margin="10,0,0,0"></Label>
+                                        <Label x:Name="infoBuymonth" FontSize="20" FontAttributes="Bold" TextColor="Green" Margin="10,0,0,0"></Label>
+                                        <Label></Label>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                                        
+                                        <Button BackgroundColor="Yellow" HeightRequest="40"></Button>
+                                        <Label Text=" : Bù vải" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,0"></Label>
+                                    </StackLayout>
+                                    <Label Text="" x:Name="PersonName" HorizontalOptions="EndAndExpand" TextColor="Blue" FontSize="20" FontAttributes="Bold" Padding="5"></Label>
+                                    <Grid BackgroundColor="Green" ColumnSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10*"></ColumnDefinition>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <!--<ColumnDefinition Width="3*"></ColumnDefinition>-->
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{xct:Translate Defect}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+
+                                        <Label Grid.Row="0" Grid.Column="1" Text="" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+
+                                        <Label Grid.Row="0" Grid.Column="2" Text="" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
+
+                                        <!--<Label Grid.Row="0" Grid.Column="3" Text="{xct:Translate Img}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>-->
+
+                                        <!--<Label Text="{xct:Translate Repair}" Grid.Column="3"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />-->
+                                    </Grid>
+
+
+                                    <ScrollView>
+                                        <ListView x:Name="SewingDefectList" HasUnevenRows="True">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <ViewCell.View>
+                                                            <SwipeView>
+                                                                <SwipeView.RightItems>
+                                                                    <SwipeItem Text="Person"
+                                                                       x:Name="person"
+                                                                       Clicked="person_Clicked"
+                                                                       IconImageSource="person.png"
+                                                                       BackgroundColor="LightBlue"
+                                                                       CommandParameter="{Binding xID}">
+                                                                    </SwipeItem>
+                                                                    <SwipeItem Text="{xct:Translate Img}"
+                                                                       
+                                                                       Clicked="Image_Button"
+                                                                       IconImageSource="eye.png"
+                                                                       BackgroundColor="LightBlue"
+                                                                       CommandParameter="{Binding .}">
+                                                                    </SwipeItem>
+                                                                </SwipeView.RightItems>
+                                                                <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                                    <Frame BackgroundColor="Transparent" VerticalOptions="Fill" Padding="0">
+                                                                        <Grid ColumnSpacing="0">
+                                                                            <Grid.ColumnDefinitions>
+                                                                                <ColumnDefinition Width="10*"/>
+                                                                                <ColumnDefinition Width="2*"/>
+                                                                                <ColumnDefinition Width="2*"/>
+                                                                                <!--<ColumnDefinition Width="3*"/>-->
+                                                                            </Grid.ColumnDefinitions>
+                                                                            <Grid.RowDefinitions>
+                                                                                <RowDefinition Height="*"/>
+                                                                            </Grid.RowDefinitions>
+                                                                            <Frame Grid.Column="0" BorderColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+                                                                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                                                                    <Label Text="{Binding ImageID} " TextColor="Black" FontSize="20" FontAttributes="Bold"></Label>
+                                                                                    
+                                                                                </StackLayout>
+                                                                                <Frame.Triggers>
+                                                                                    <DataTrigger TargetType="Frame" Binding="{Binding PartStatus}" Value="A">
+                                                                                        <Setter Property="BackgroundColor" Value="Yellow"></Setter>
+                                                                                    </DataTrigger>
+                                                                                </Frame.Triggers>
+                                                                            </Frame>
+                                                                            <Frame Grid.Column="1" BorderColor="Red"
+                                                                                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{Binding .}" >
+                                                                                    <ImageButton x:Name="ckbsttus" 
+                                                                                          IsEnabled="False"
+                                                                                          VerticalOptions="Center"
+                                                                                          BackgroundColor="Transparent"
+                                                                                          Source="repairtool.png"
+                                                                                          BindingContext="{Binding .}">
+                                                                                        <ImageButton.Triggers>
+                                                                                            <DataTrigger TargetType="ImageButton" Binding="{Binding ProcStatus, TargetNullValue=''}" Value="">
+                                                                                                <Setter Property="Source" Value="notrepair.png"></Setter>
+                                                                                            </DataTrigger>
+
+                                                                                            <DataTrigger TargetType="ImageButton" Binding="{Binding ProcStatus}" Value="P">
+                                                                                                <Setter Property="Source" Value="repairtool.png"></Setter>
+                                                                                            </DataTrigger>
+                                                                                            <DataTrigger TargetType="ImageButton" Binding="{Binding ProcStatus}" Value="D">
+                                                                                                <Setter Property="Source" Value="select48.png"></Setter>
+                                                                                            </DataTrigger>
+                                                                                        </ImageButton.Triggers>
+                                                                                    </ImageButton>
+                                                                                <Frame.GestureRecognizers>
+                                                                                    <TapGestureRecognizer Tapped="ckbsttus_Clicked"></TapGestureRecognizer>
+                                                                                </Frame.GestureRecognizers>
+                                                                                <Frame.Triggers>
+                                                                                    <DataTrigger TargetType="Frame" Binding="{Binding PartStatus}" Value="A">
+                                                                                        <Setter Property="BackgroundColor" Value="Yellow"></Setter>
+                                                                                    </DataTrigger>
+                                                                                </Frame.Triggers>
+                                                                            </Frame>
+                                                                            <Frame Grid.Column="2" BorderColor="Red"
+                                                                                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                                                                <ImageButton x:Name="btnDone" 
+                                                                                          IsEnabled="False"
+                                                                                          
+                                                                                          VerticalOptions="Center"
+                                                                                          BackgroundColor="Transparent"
+                                                                                          Source="close2.png"
+                                                                                          BindingContext="{Binding .}">
+                                                                                    <ImageButton.Triggers>
+                                                                                        <DataTrigger TargetType="ImageButton" Binding="{Binding ProcStatus}" Value="D">
+                                                                                            <Setter Property="Source" Value="check.png"></Setter>
+                                                                                        </DataTrigger>
+
+                                                                                    </ImageButton.Triggers>
+                                                                                </ImageButton>
+                                                                                <Frame.GestureRecognizers>
+                                                                                    <TapGestureRecognizer Tapped="btnDone_Clicked"></TapGestureRecognizer>
+                                                                                </Frame.GestureRecognizers>
+                                                                                <Frame.Triggers>
+                                                                                    <DataTrigger TargetType="Frame" Binding="{Binding PartStatus}" Value="A">
+                                                                                        <Setter Property="BackgroundColor" Value="Yellow"></Setter>
+                                                                                    </DataTrigger>
+                                                                                </Frame.Triggers>
+                                                                            </Frame>
+                                                                        </Grid>
+                                                                    </Frame>
+                                                                </StackLayout>
+
+                                                            </SwipeView>
+
+                                                        </ViewCell.View>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </ScrollView>
+
+                                </StackLayout>
+                            </ScrollView>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </RefreshView>
+            <StackLayout VerticalOptions="End" HeightRequest="40">
+                    <Button Text="{xct:Translate Continue}" x:Name="btnContinue" Clicked="btnContinue_Clicked" BackgroundColor="Yellow" TextColor="Black" FontAttributes="Bold"/>
+                </StackLayout>
+
+            <StackLayout VerticalOptions="End" HeightRequest="40">
+                    <Button Text="{xct:Translate Close}" x:Name="btnback" Clicked="btnback_Clicked" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"/>
+                </StackLayout>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

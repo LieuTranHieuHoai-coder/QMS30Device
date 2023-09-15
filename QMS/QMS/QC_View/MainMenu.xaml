@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="QMS.QC_View.MainMenu">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#83be62">
+
+            <StackLayout  Orientation="Horizontal" VerticalOptions="StartAndExpand" BackgroundColor="#343a40" Spacing="0" Margin="0,0,0,0" >
+                 <Image Source="photo_watermark" />
+
+                <Button IsVisible="false" Text="{xct:Translate FG}" BackgroundColor="Transparent" TextColor="White" WidthRequest="90" HeightRequest="10" FontSize="13" x:Name="btnFG" Clicked="btnFG_Clicked"/>
+
+                <Button IsVisible="false" x:Name="BtnPacking" Text="{xct:Translate PACKING}" BackgroundColor="Transparent" TextColor="White" WidthRequest="90" HeightRequest="10" FontSize="13"/>
+
+                <Button IsVisible="false" x:Name="BtnSemi" Text="{xct:Translate SEMI}" BackgroundColor="Transparent" TextColor="White" WidthRequest="90" HeightRequest="10" FontSize="13"/>
+
+                <!--<Button Text="INLINE" BackgroundColor="Transparent" TextColor="White" WidthRequest="90" HeightRequest="10" FontSize="13"/>-->
+               
+                    <Button x:Name="btnloginsystem" 
+                            Clicked="btnloginsystem_Clicked"
+                            BackgroundColor="Transparent" TextColor="White"  HeightRequest="10" FontSize="13"/>
+                          
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <Label HorizontalTextAlignment="Center" Text="Welcome to QMS" TextColor="White"  FontSize="60" VerticalOptions="CenterAndExpand" Padding="0,0,0,400"/>
+            </StackLayout>
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

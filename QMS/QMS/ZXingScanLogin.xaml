@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="QMS.ZXingScanLogin"
+               xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             SizeChanged="ContentPage_SizeChanged" BackgroundColor="#3f5e2e"
+             xmlns:scnner="clr-namespace:BarcodeScanner.Mobile;assembly=BarcodeScanner.Mobile.XamarinForms">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand"  x:Name="stkzxing">
+            <Label Text="{xct:Translate Login}" TextColor="White" FontAttributes="Bold" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+            <Frame BorderColor="Green" Margin="5,5,5,5" CornerRadius="5 " x:Name="frmlogin">
+                <!--<zxing:ZXingScannerView 
+                x:Name="zxing" 
+                WidthRequest="250"
+                HeightRequest="450"
+                
+                OnScanResult="zxing_OnScanResult"
+                     
+                VerticalOptions="FillAndExpand"/>-->
+                <scnner:CameraView OnDetected="CameraView_OnDetected" CameraFacing="Front"
+                                   x:Name="GVScanner" VibrationOnDetected="True"></scnner:CameraView>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Button Text="Switch Camera" HorizontalOptions="End" x:Name="btnswitch" Clicked="btnswitch_Clicked" 
+                    BackgroundColor="Cyan"
+                    ImageSource="returnDefect" CornerRadius="5" BorderColor="Black" BorderWidth="2" Margin="0,0,5,5"/>
+                <Button Text="Back" HorizontalOptions="End" x:Name="btnback" Clicked="btnback_Clicked" 
+                    BackgroundColor="Cyan"
+                    ImageSource="back" CornerRadius="5" BorderColor="Black" BorderWidth="2" WidthRequest="130" Margin="0,0,5,5"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

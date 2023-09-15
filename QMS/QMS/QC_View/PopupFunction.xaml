@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+               xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+              x:Class="QMS.QC_View.PopupFunction" BackgroundColor="#83be62">
+    <!--<ContentPage.Content>-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"           
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="FillAndExpand"  
+                 Padding="10" 
+                 Margin="10" HeightRequest="400"
+                  >
+
+        <Frame CornerRadius="5" BorderColor="#343a40" HorizontalOptions="CenterAndExpand" Padding="20">
+            <StackLayout BackgroundColor="White" Padding="-19">
+                <Grid  BackgroundColor="#343a40">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Text="{xct:Translate Function}" TextColor="White" FontSize="20" 
+                            FontAttributes="Bold" Grid.Column="0" Grid.ColumnSpan="2"  
+                           VerticalTextAlignment="Center"  Padding="5"/>
+                    <ImageButton x:Name="close" Source="close1.png" BackgroundColor="Transparent"
+                             Grid.Column="3"
+                             Grid.Row="0"
+                             MinimumWidthRequest="0.5"
+                             HorizontalOptions="End"                              
+                             MinimumHeightRequest="0.5"          
+                             Clicked="close_Clicked"
+                            />
+                </Grid>
+                
+                <Button IsVisible="false" x:Name="btnsewingout"
+                         Margin="5,-5,5,0"
+                         Text="{xct:Translate SewingOutput}" BackgroundColor="#007bff"  TextColor="White" Clicked="btnsewingout_Clicked" />
+                <Button IsVisible="false" Text="{xct:Translate QCJob}" 
+                         Margin="5,-5,5,0"
+                        BackgroundColor="#28a745" TextColor="White" x:Name="btnQCRECEIVING" Clicked="btnQCRECEIVING_Clicked"/>
+                <Button IsVisible="false" Text="{xct:Translate QcCheckAgain}" 
+                         Margin="5,-5,5,0"
+                        BackgroundColor="LightGray" TextColor="White" x:Name="btnQCScan" Clicked="btnQCScan_Clicked"/>
+                <Button IsVisible="false" Text="{xct:Translate CheckQR}" 
+                         Margin="5,-5,5,0"
+                        BackgroundColor="#ffc107" TextColor="Black" x:Name="btnCheckQR" Clicked="btnCheckQR_Clicked"/>
+                <Button IsVisible="false" Text="{xct:Translate DailyProductionReport}"  
+                         Margin="5,-5,5,5"
+                        BackgroundColor="#dc3545" TextColor="White" x:Name="btndailyreport" Clicked="btndailyreport_Clicked"/>
+                <!--<Button Text="Đóng"  BackgroundColor="Gray" TextColor="White" x:Name="btclose" Clicked="btclose_Clicked"/>-->
+                <!--<ListView x:Name="ListFunction" HeightRequest="500">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Button Text="{Binding perm}" Margin="5" BackgroundColor="{Binding .}" 
+                                        HeightRequest="50"
+                                        TextColor="Black"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                
+            </StackLayout>
+
+        </Frame>
+
+    </StackLayout>
+</pages:PopupPage>

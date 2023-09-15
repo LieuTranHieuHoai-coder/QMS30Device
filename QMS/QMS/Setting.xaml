@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.Setting"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="#3f5e2e" Title="QMS">
+    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="10,5,10,5" HorizontalOptions="Fill" >
+        <Frame CornerRadius="5" BorderColor="#343a40" Padding="1" HasShadow="True" VerticalOptions="CenterAndExpand" WidthRequest="1000">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HeightRequest="60" BackgroundColor="#343a40">
+                    <Label Text="{xct:Translate Setting}" TextTransform="Uppercase" FontSize="20"  Padding="5" FontAttributes="Bold"
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" 
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <!--<ImageButton x:Name="imgclose" Source="close1.png"
+                         WidthRequest="40" HeightRequest="30"
+                         HorizontalOptions="End"                     
+                         BackgroundColor="Transparent"                         
+                         Clicked="imgclose_Clicked"
+                         VerticalOptions="Center"/>-->
+                </StackLayout>
+
+                <StackLayout VerticalOptions="FillAndExpand" Padding="10" >
+
+                    <Label Text="{xct:Translate Site}" FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand" 
+                   FontSize="Medium"
+                   TextColor="Black"/>
+                    <Picker x:Name="PkSite" Title="{xct:Translate ChooseSite}" FontAttributes="Bold"
+                ItemDisplayBinding="{Binding FactoryName}"               
+                SelectedIndexChanged="pkSite_SelectedIndexChanged">
+                    </Picker>
+                    <Label Text="{xct:Translate Factory}" FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand" FontSize="Medium" 
+                   TextColor="Black"/>
+                    <Picker x:Name="PkFactory" Title="{xct:Translate ChooseFactory}"
+                ItemDisplayBinding="{Binding ProductionWorkShop}"               
+                
+                        IsEnabled="True"
+                        
+                        SelectedIndexChanged="pkFactory_SelectedIndexChanged">
+                    </Picker>
+                    <Label Text="{xct:Translate SewingLine}" FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand" FontSize="Medium" 
+                   TextColor="Black"/>
+                    <Picker x:Name="PkSewingline" Title="{xct:Translate ChooseSewingLine}"
+                ItemDisplayBinding="{Binding SewingLine}"                
+                IsEnabled="True">
+                    </Picker>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Frame CornerRadius="10"  
+                       BorderColor="Blue"
+                       HorizontalOptions="CenterAndExpand"
+                       WidthRequest="120"
+                       HeightRequest="20"
+                       Padding="10"
+                               BackgroundColor="Cyan"
+                               Margin="0,0,10,10"
+                       >
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="btnconfirm_Clicked" />
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" 
+                                         HeightRequest="20"
+                                         BackgroundColor="Cyan"
+                                         Padding="0">
+                                <Label Text="{xct:Translate Confirm}"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                      BackgroundColor="Cyan"
+                                       TextColor="Blue"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="CenterAndExpand"/>
+                                <ImageButton Source="checkmark.png"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="15"                                            
+                                        BackgroundColor="Transparent"/>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+        </Frame>
+    </StackLayout>
+</ContentPage>

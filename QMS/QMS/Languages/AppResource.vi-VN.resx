@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACCOUNT_PW" xml:space="preserve">
+    <value>Tài Khoản Hoặc Mật Khẩu Không Đúng!</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Quay Lại</value>
+  </data>
+  <data name="beingrepaired" xml:space="preserve">
+    <value>Áo Đang Sửa</value>
+  </data>
+  <data name="BuyMonth" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Thay Đổi</value>
+  </data>
+  <data name="CheckInternet" xml:space="preserve">
+    <value>Kiểm Tra Wifi</value>
+  </data>
+  <data name="CheckQR" xml:space="preserve">
+    <value>CHUYỀN MAY KIỂM-SỬA LỖI</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="ChooseFactory" xml:space="preserve">
+    <value>Chọn Xưởng</value>
+  </data>
+  <data name="ChooseSewingLine" xml:space="preserve">
+    <value>Chọn Chuyền may</value>
+  </data>
+  <data name="ChooseSite" xml:space="preserve">
+    <value>Chọn Cty</value>
+  </data>
+  <data name="Cleanliness" xml:space="preserve">
+    <value>6-Vết Bẩn</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Màu</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Xác Nhận</value>
+  </data>
+  <data name="ConfirmRepair" xml:space="preserve">
+    <value>Xác Nhận Sửa Lỗi</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Tiếp Tục</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>KH</value>
+  </data>
+  <data name="DailyProductionReport" xml:space="preserve">
+    <value>Báo Cáo Sản Lượng Hàng Ngày</value>
+  </data>
+  <data name="DailyReportTitle" xml:space="preserve">
+    <value>BÁO BIỂU SẢN LƯỢNG HÀNG NGÀY</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="DateRangeInvalid" xml:space="preserve">
+    <value>Thời gian không hợp lệ</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Chi Tiết</value>
+  </data>
+  <data name="Detailsofproductdefects" xml:space="preserve">
+    <value>BẢNG CHI TIẾT LỖI SẢN PHẨM</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="ERROR_TRYAGAIN" xml:space="preserve">
+    <value>Lỗi Thao Tác, Thử Lại</value>
+  </data>
+  <data name="Exceeding_The_Amount" xml:space="preserve">
+    <value>Vượt Quá SL, Ko Thể Lưu</value>
+  </data>
+  <data name="FabricAccessory" xml:space="preserve">
+    <value>1-Vải/3-PL</value>
+  </data>
+  <data name="Factory" xml:space="preserve">
+    <value>Chọn Xưởng</value>
+  </data>
+  <data name="Finishgood" xml:space="preserve">
+    <value>Thành Phẩm</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Từ</value>
+  </data>
+  <data name="Function" xml:space="preserve">
+    <value> Chức  Năng</value>
+  </data>
+  <data name="Img" xml:space="preserve">
+    <value>Hình</value>
+  </data>
+  <data name="INPUTINFORMATION" xml:space="preserve">
+    <value>Nhập Thông Tin</value>
+  </data>
+  <data name="InputQR" xml:space="preserve">
+    <value>Nhập QR</value>
+  </data>
+  <data name="InputQRcode" xml:space="preserve">
+    <value>Nhập số QR</value>
+  </data>
+  <data name="Inside" xml:space="preserve">
+    <value>Áo Lót</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Đang tải</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ĐĂNG NHẬP</value>
+  </data>
+  <data name="LOGINERROR" xml:space="preserve">
+    <value>Lỗi Đăng Nhập</value>
+  </data>
+  <data name="Loginsystem" xml:space="preserve">
+    <value>ĐĂNG NHẬP HỆ THỐNG</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>LogOut</value>
+  </data>
+  <data name="Logo_Label" xml:space="preserve">
+    <value>4-Logo/5-Nhãn</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>Thông Báo</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Tiếp Tục</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Không có dữ liệu</value>
+  </data>
+  <data name="NODEFONGARMENT" xml:space="preserve">
+    <value>Không Có Lỗi Trên Áo</value>
+  </data>
+  <data name="NOPICTURE" xml:space="preserve">
+    <value>Không Có Hình Ảnh</value>
+  </data>
+  <data name="NotFoundQRCode" xml:space="preserve">
+    <value>Không tìm thấy QRCode</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>ĐH</value>
+  </data>
+  <data name="Outside" xml:space="preserve">
+    <value>Áo Chính</value>
+  </data>
+  <data name="PassQty" xml:space="preserve">
+    <value>Đạt (RFT)</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật Khẩu</value>
+  </data>
+  <data name="permissiontothedevice" xml:space="preserve">
+    <value>Cấp Quyền Máy Ảnh</value>
+  </data>
+  <data name="PO" xml:space="preserve">
+    <value>PO</value>
+  </data>
+  <data name="QCDefect" xml:space="preserve">
+    <value>QC BẮT LỖI</value>
+  </data>
+  <data name="QCRecieving" xml:space="preserve">
+    <value>QC Nhận</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>Mã QR</value>
+  </data>
+  <data name="QRNOTAVAILABLE" xml:space="preserve">
+    <value>QR Không Khả Dụng</value>
+  </data>
+  <data name="QRPASSED" xml:space="preserve">
+    <value>QR Được Thông Qua</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>SL</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>Truy vấn</value>
+  </data>
+  <data name="QUERYDATA" xml:space="preserve">
+    <value>Đang truy vấn dữ liệu...</value>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="RepairGarment" xml:space="preserve">
+    <value>CHUYỀN MAY SỬA LỖI</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Luu</value>
+  </data>
+  <data name="Scan" xml:space="preserve">
+    <value>Quét</value>
+  </data>
+  <data name="SCANNED" xml:space="preserve">
+    <value>Mã QR Đã Quét</value>
+  </data>
+  <data name="ScanQRcode" xml:space="preserve">
+    <value>Quét QR</value>
+  </data>
+  <data name="ScanQRLogin" xml:space="preserve">
+    <value>QUÉT MÃ QR- ĐĂNG NHẬP HỆ THỐNG</value>
+  </data>
+  <data name="ScanQRQMS" xml:space="preserve">
+    <value>Truy Vấn QR- QMS</value>
+  </data>
+  <data name="ScanQRQMSQTY" xml:space="preserve">
+    <value>Truy Vấn QR</value>
+  </data>
+  <data name="Seamseal_Bonding" xml:space="preserve">
+    <value>7-Seamseal/Keo</value>
+  </data>
+  <data name="SearchItem" xml:space="preserve">
+    <value>Tìm Kiếm...</value>
+  </data>
+  <data name="Season" xml:space="preserve">
+    <value>Mùa</value>
+  </data>
+  <data name="SelectFactory" xml:space="preserve">
+    <value>Chọn nhà máy</value>
+  </data>
+  <data name="SelectLine" xml:space="preserve">
+    <value>Chọn chuyền</value>
+  </data>
+  <data name="Semigood" xml:space="preserve">
+    <value>BÁN THÀNH PHẨM</value>
+  </data>
+  <data name="SewingLine" xml:space="preserve">
+    <value>Chuyền</value>
+  </data>
+  <data name="SewingOutput" xml:space="preserve">
+    <value>Sản Lượng May</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Chọn Cty</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Mã</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Đến</value>
+  </data>
+  <data name="UNABLETOGETINFOR" xml:space="preserve">
+    <value>Không lấy được thông tin</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Tên Người Dùng</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Tên Người Dùng</value>
+  </data>
+  <data name="UserNameID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>Thông Tin</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Cảnh báo</value>
+  </data>
+  <data name="Workmanship_SPI" xml:space="preserve">
+    <value>2-Tay Nghề/9-Mũi Chỉ</value>
+  </data>
+  <data name="WorkNo" xml:space="preserve">
+    <value>WorkNo:</value>
+  </data>
+  <data name="YesToConfirm" xml:space="preserve">
+    <value>Nhấn Yes để Xác Nhận</value>
+  </data>
+  <data name="YesToFinish" xml:space="preserve">
+    <value>Nhấn Yes Để Xác Nhận Sửa</value>
+  </data>
+  <data name="YesToPass" xml:space="preserve">
+    <value>Nhấn Yes Hoàn Thành Áo</value>
+  </data>
+  <data name="Front" xml:space="preserve">
+    <value>Áo Ngoài</value>
+  </data>
+  <data name="OVERQTY_NOTSAVE" xml:space="preserve">
+    <value>Số lượng vượt quá số lượng đơn hàng</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Cài Đặt</value>
+  </data>
+  <data name="FG" xml:space="preserve">
+    <value>TP</value>
+  </data>
+  <data name="PACKING" xml:space="preserve">
+    <value>PACKING</value>
+  </data>
+  <data name="SEMI" xml:space="preserve">
+    <value>BTP</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Xóa Thành Công</value>
+  </data>
+  <data name="Dontfixthisdefect" xml:space="preserve">
+    <value>Không sửa lỗi này</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="NoWorkersToFix" xml:space="preserve">
+    <value>Chưa có công nhân sửa lỗi</value>
+  </data>
+  <data name="QCJob" xml:space="preserve">
+    <value>Công Việc QC</value>
+  </data>
+  <data name="C_Grade" xml:space="preserve">
+    <value>Hàng C</value>
+  </data>
+  <data name="Invalid Username or Password" xml:space="preserve">
+    <value>Tài khoản hoặc mật khẩu không đúng</value>
+  </data>
+  <data name="ConfirmRework" xml:space="preserve">
+    <value>Xác nhận làm lại</value>
+  </data>
+  <data name="Numberofremakes" xml:space="preserve">
+    <value>Số lần sửa lại:</value>
+  </data>
+  <data name="switch camera" xml:space="preserve">
+    <value>Chuyển Camera</value>
+  </data>
+  <data name="QtyScan" xml:space="preserve">
+    <value>Số Lượng QC Scan:</value>
+  </data>
+  <data name="AddNewSuccess" xml:space="preserve">
+    <value>Thêm Mới Thành Công</value>
+  </data>
+  <data name="change line" xml:space="preserve">
+    <value>Đổi tổ</value>
+  </data>
+  <data name="enter error information" xml:space="preserve">
+    <value>Thêm Thông Tin Áo Lỗi</value>
+  </data>
+  <data name="catch the error" xml:space="preserve">
+    <value>Bắt Lỗi</value>
+  </data>
+  <data name="defect search" xml:space="preserve">
+    <value>Tìm Kiếm Lỗi</value>
+  </data>
+  <data name="Enter error code" xml:space="preserve">
+    <value>Nhập mã lỗi</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Đã chọn: </value>
+  </data>
+  <data name="Add DetaiQcQrCode failed" xml:space="preserve">
+    <value>Thêm DetaiQcQrCode không thành công</value>
+  </data>
+  <data name="Add ProductionProcess failed" xml:space="preserve">
+    <value>Thêm ProductionProcess không thành công</value>
+  </data>
+  <data name="C grade" xml:space="preserve">
+    <value>Áo hàng C</value>
+  </data>
+  <data name="Passed product. Do you want to fix it?" xml:space="preserve">
+    <value>Áo đã pass. Bạn có muốn sửa lại ?</value>
+  </data>
+  <data name="product passed" xml:space="preserve">
+    <value>Áo đã pass</value>
+  </data>
+  <data name="Qc is checking" xml:space="preserve">
+    <value>Qc đang kiểm tra</value>
+  </data>
+  <data name="Shirt C. Do you want to Recycle ?" xml:space="preserve">
+    <value>Áo Hàng C. Bạn có muốn Tái Chế ?</value>
+  </data>
+  <data name="error fixed" xml:space="preserve">
+    <value>Lỗi đã sửa</value>
+  </data>
+  <data name="color and size have not been entered" xml:space="preserve">
+    <value>Màu và Size chưa được nhập</value>
+  </data>
+  <data name="Return failed" xml:space="preserve">
+    <value>Trả lại thất bại</value>
+  </data>
+  <data name="Return successful" xml:space="preserve">
+    <value>Trả lại thành công</value>
+  </data>
+  <data name="worker is fixing" xml:space="preserve">
+    <value>Công nhân đang sửa</value>
+  </data>
+  <data name="give back" xml:space="preserve">
+    <value>Trả hàng</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Qc đang kiểm</value>
+  </data>
+  <data name="QcCheckAgain" xml:space="preserve">
+    <value>Qc Kiểm Lại</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Dưới</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Trái</value>
+  </data>
+  <data name="Mid" xml:space="preserve">
+    <value>Sườn</value>
+  </data>
+  <data name="MidLeft" xml:space="preserve">
+    <value>Sườn Trái</value>
+  </data>
+  <data name="MidRight" xml:space="preserve">
+    <value>Sườn Phải</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Phải</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Trên</value>
+  </data>
+  <data name="LeftRight" xml:space="preserve">
+    <value>Trái+Phải</value>
+  </data>
+  <data name="Repalce Fabric" xml:space="preserve">
+    <value>Bù Vải</value>
+  </data>
+  <data name="DefectQty" xml:space="preserve">
+    <value>Không Đạt</value>
+  </data>
+  <data name="PassRFT" xml:space="preserve">
+    <value>Pass (RFT)</value>
+  </data>
+  <data name="passpercentage" xml:space="preserve">
+    <value>TL Pass</value>
+  </data>
+  <data name="ByDefectCode" xml:space="preserve">
+    <value>Theo Mã</value>
+  </data>
+  <data name="defectpercentage" xml:space="preserve">
+    <value>TL Lỗi</value>
+  </data>
+</root>

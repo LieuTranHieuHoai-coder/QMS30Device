@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.ResultSemiGood"
+              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{xct:Translate Semigood}"
+                   VerticalTextAlignment="Center"
+                   FontSize="30" 
+                       HorizontalOptions="CenterAndExpand"
+                   TextColor="Red" />
+            </StackLayout>
+
+            <StackLayout>
+                <Grid  HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0" Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150" ></ColumnDefinition>
+                        <ColumnDefinition  Width="550"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView BackgroundColor="#c7e6f5" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text=" Work No:" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="0" Grid.Column="0"/>
+                    <BoxView BackgroundColor="#c7e6f5" Grid.Row="0" Grid.Column="1"/>
+                    <Label x:Name="lbWorkNo" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black" 
+                   FontAttributes="Bold" FontSize="Medium"
+                   Grid.Row="0" Grid.Column="1"
+                   />
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  Customer}" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="1" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="White" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="lblCustomer" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium"  
+                   Grid.Row="1" Grid.Column="1"/>
+
+                    <BoxView BackgroundColor="#c7e6f5"
+                     Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  Season}" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue"  
+                   Grid.Row="2" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="2" Grid.Column="1"/>
+                    <Label x:Name="lblSeason" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="2" Grid.Column="1"/>
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  OrderNo}" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="3" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="3" Grid.Column="1"/>
+                    <Label x:Name="lblOrder" 
+                   VerticalTextAlignment="Center"                   
+                   TextColor="Black"
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="3" Grid.Column="1"/>
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="4" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  Style}" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue"  
+                   Grid.Row="4" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="4" Grid.Column="1"/>
+                    <Label x:Name="lblstyle" 
+                   VerticalTextAlignment="Center"
+                  
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="4" Grid.Column="1"/>
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="5" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  Color}" FontSize="Medium"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="5" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="5" Grid.Column="1"/>
+                    <Label x:Name="lblcolor" 
+                   VerticalTextAlignment="Center"
+                    
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="5" Grid.Column="1"/>
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="6" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  Sỉze}" 
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" 
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="6" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="6" Grid.Column="1"/>
+                    <Label x:Name="lblSize" 
+                   VerticalTextAlignment="Center"                   
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Grid.Row="6" Grid.Column="1"/>
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="7" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  PO}" FontSize="Medium" 
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="7" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="White" 
+                     Grid.Row="7" Grid.Column="1"/>
+                    <Label x:Name="lblPO"                    
+                   VerticalTextAlignment="Center"
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium"
+                   Grid.Row="7" Grid.Column="1"/>
+
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="8" Grid.Column="0"/>
+                    <Label Text="{xct:Translate  QRCode}" FontSize="Medium" 
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold" 
+                   TextColor="Blue" 
+                   Grid.Row="8" Grid.Column="0"/>
+
+                    <BoxView BackgroundColor="#c7e6f5" 
+                     Grid.Row="8" Grid.Column="1"/>
+                    <Label x:Name="lblnumberQR"                    
+                   VerticalTextAlignment="Center"
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium"
+                   Grid.Row="8" Grid.Column="1"/>
+
+
+
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Button x:Name="lblMessage"
+                    Margin="1"
+                    FontSize="Small"
+                    CornerRadius="5"
+                    BackgroundColor="#f8f6b9"                   
+                    TextColor="Red"
+                   />
+                </StackLayout>
+
+                <Frame CornerRadius="10"  
+                                       x:Name="btnSave"
+                                       OutlineColor="Green"
+                                       HorizontalOptions="FillAndExpand"
+                                       WidthRequest="150"
+                                       HeightRequest="30"
+                                       Padding="10"
+                                       IsVisible="True"                                      
+                                       >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnSaved_Clicked"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" BackgroundColor="White"                                                            
+                                         Padding="0">
+                        <Label Text="{xct:Translate Save}"
+                                           FontSize="20"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                        <ImageButton Source="save.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="10"  
+                                       OutlineColor="Yellow"
+                                       HorizontalOptions="FillAndExpand"
+                                       WidthRequest="150"
+                                       HeightRequest="30"
+                                       Padding="10"
+                                      
+                                       >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnNext_Clicked"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="White"                                                          
+                                         Padding="0">
+
+                        <Label Text="{xct:Translate  Continue}"
+                                           FontSize="20"
+                                           TextColor="DarkOrchid" 
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                        <ImageButton Source="continue16.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"                                 
+                                            BackgroundColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

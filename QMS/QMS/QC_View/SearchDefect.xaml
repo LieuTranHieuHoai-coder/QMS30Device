@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             x:Class="QMS.QC_View.SearchDefect">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="CenterAndExpand">
+                <Label Text="{xct:Translate defect search}" VerticalOptions="CenterAndExpand" FontSize="30" 
+                       FontAttributes="Bold" TextColor="Red" TextDecorations="Underline"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Button Text="{xct:Translate Outside}" 
+                        x:Name="outside"
+                        BackgroundColor="Black"
+                        Margin="2" 
+                        WidthRequest="115"
+                        HeightRequest="40"
+                                
+                        Clicked="outside_Clicked" FontSize="14" 
+                        BorderWidth="1" CornerRadius="5"
+                        BorderColor="Black"
+                        TextColor="White"></Button>
+                <Button Text="{xct:Translate Inside}" 
+                        x:Name="inside"
+                        BackgroundColor="White"
+                        Margin="2" 
+                        WidthRequest="115"
+                        HeightRequest="40"
+                        Clicked="inside_Clicked" FontSize="14" 
+                        BorderColor="Black"
+                        BorderWidth="1" CornerRadius="5"
+                        TextColor="Black"></Button>
+                
+            </StackLayout>
+            <Frame BorderColor="Blue" BackgroundColor="Cyan"  Padding="2">
+                <StackLayout VerticalOptions="StartAndExpand" Padding="0" Margin="0">
+                    <FlexLayout Direction="Row" Wrap="Wrap"  Margin="0" Padding="0" VerticalOptions="Start"  AlignContent="Start" AlignItems="Center">
+
+                        <Button x:Name="btndefectFab" Clicked="btndefectFab_Clicked" Text="{xct:Translate FabricAccessory}" FontSize="12" 
+                                WidthRequest="165" Margin="2"
+                                    TextColor="Black" FontAttributes="Bold" BorderWidth="0.1" CornerRadius="8" 
+                                    BackgroundColor="Yellow" BorderColor="Black" HeightRequest="45"/>
+                        <Button x:Name="btndefectWork" WidthRequest="165" Margin="2" Clicked="btndefectWork_Clicked"
+                                    Text="{xct:Translate Workmanship_SPI}" FontSize="12" TextColor="White" 
+                                    FontAttributes="Bold" BorderWidth="0.1" CornerRadius="8" BackgroundColor="Red" BorderColor="Black" 
+                                    HeightRequest="45"/>
+                        <Button x:Name="btndefectClea"  Margin="5" WidthRequest="165" Clicked="btndefectClea_Clicked"
+                                    Text="{xct:Translate Cleanliness}" FontSize="12" TextColor="Red" FontAttributes="Bold"  
+                                    BorderWidth="0.1" CornerRadius="8" BackgroundColor="LightGray" BorderColor="Black" HeightRequest="45"/>
+                        <Button x:Name="btndefectLogo"  Text="{xct:Translate Logo_Label}" FontSize="12"  WidthRequest="165" Margin="2"
+                                Clicked="btndefectLogo_Clicked"
+                                    TextColor="White" FontAttributes="Bold"  BorderWidth="0.1" CornerRadius="8" BackgroundColor="Blue" 
+                                    BorderColor="Black" HeightRequest="45"/>
+                        <Button x:Name="btndefectSeam"  Text="{xct:Translate Seamseal_Bonding}" FontSize="12" WidthRequest="165" Margin="2"
+                                Clicked="btndefectSeam_Clicked"
+                                    TextColor="White" FontAttributes="Bold"  BorderWidth="0.1" CornerRadius="8" BackgroundColor="Teal" BorderColor="Black" HeightRequest="45"/>
+                        <!--<Button x:Name="showdefect"  Text="" FontSize="12" WidthRequest="165" Margin="2"
+                                Clicked="btndefectSeam_Clicked"
+                                    TextColor="Red" FontAttributes="Bold"  BorderWidth="0.1" CornerRadius="8" BackgroundColor="White" BorderColor="Black" HeightRequest="45"/>-->
+                    </FlexLayout>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Blue" BackgroundColor="Cyan"  Padding="2">
+                <StackLayout>
+                    <Frame BackgroundColor="Transparent" Padding="2" HeightRequest="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkTop" CheckedChanged="checkTop_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate Top}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkBottom" CheckedChanged="checkBottom_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate Bottom}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkLeft" CheckedChanged="checkLeft_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate Left}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkRight" CheckedChanged="checkRight_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate Right}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkMid" CheckedChanged="checkMid_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate Mid}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent" Padding="2" HeightRequest="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkCenterLeft" CheckedChanged="checkCenterLeft_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate MidLeft}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkCenterRight" CheckedChanged="checkCenterRight_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate MidRight}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <CheckBox x:Name="checkLeftRight" CheckedChanged="checkLeftRight_CheckedChanged"></CheckBox>
+                                <Label Text="{xct:Translate LeftRight}" FontSize="20" TextColor="Black"></Label>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+            </Frame>
+            
+            <Frame BorderColor="Black" Margin="2" Padding="2" x:Name="btnPosition" IsEnabled="False">
+                <StackLayout>
+                    
+                    <ScrollView HeightRequest="400">
+                        <FlexLayout x:Name="listPosition"  AlignItems="Center" AlignContent="Center" Margin="1"
+                                         BindableLayout.ItemsSource="{Binding returns}" IsEnabled="False"           
+                                         HorizontalOptions="CenterAndExpand"
+                                         Wrap="Wrap"
+                                        >
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Text="{Binding DefectBtn}" 
+                                            Margin="1" 
+                                    WidthRequest="128"
+                                    HeightRequest="50"
+                                            BackgroundColor="{Binding Color}" 
+                                            CommandParameter="{Binding xID}"
+                                            Clicked="Button_Clicked" FontSize="12" 
+                                            BorderWidth="1" CornerRadius="5"
+                                            TextColor="White"></Button>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+
+            <ScrollView HeightRequest="300">
+                <StackLayout VerticalOptions="Start" HeightRequest="250">
+                    <StackLayout VerticalOptions="StartAndExpand" HeightRequest="30">
+                        <Grid BackgroundColor="Green">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <!--<ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <ColumnDefinition Width="3*"></ColumnDefinition>-->
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{xct:Translate Defect}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+
+                        <ListView x:Name="defectView" VerticalOptions="FillAndExpand" HasUnevenRows="True" BackgroundColor="White" SelectionMode="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <SwipeView>
+                                                <StackLayout Orientation="Vertical" BackgroundColor="White" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                                    <Frame BackgroundColor="White" VerticalOptions="Fill" Padding="0">
+                                                        <Grid ColumnSpacing="0" BackgroundColor="White">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*"/>
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="*"/>
+                                                            </Grid.RowDefinitions>
+
+                                                            <Frame Grid.Column="0" BorderColor="White" 
+                                                                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5" >
+                                                                <StackLayout Orientation="Horizontal">
+
+                                                                    <Label Text="{Binding ImageID} " TextColor="Black" FontSize="20" FontAttributes="Bold"></Label>
+
+                                                                </StackLayout>
+                                                                
+                                                            </Frame>
+                                                        </Grid>
+                                                    </Frame>
+                                                </StackLayout>
+                                            </SwipeView>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+                <Button BackgroundColor="Green" 
+                                x:Name="back" Clicked="back_Clicked" 
+                                WidthRequest="250"
+                                VerticalOptions="End"
+                                BorderColor="Green" BorderWidth="1" 
+                                Margin="0" Text="{xct:Translate Back}" 
+                                FontAttributes="Bold" FontSize="15" 
+                                HeightRequest="60"
+                                TextColor="White">
+                </Button>
+                <Button BackgroundColor="Yellow" 
+                                x:Name="Continue" Clicked="Continue_Clicked" 
+                                VerticalOptions="End"
+                                BorderColor="Yellow" BorderWidth="1" 
+                                Margin="0" Text="{xct:Translate Continue}" 
+                                FontAttributes="Bold" FontSize="15" 
+                                HeightRequest="60"
+                        WidthRequest="250"
+                                TextColor="Black">
+                </Button>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

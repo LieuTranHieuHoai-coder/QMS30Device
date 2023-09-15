@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QMS.FlyoutMenuPageDetail"
+             Title="QMS System" BackgroundColor="#83be62"
+             
+             >    
+    <StackLayout Padding="10">
+    <Label Text="Welcome to QMS System"
+           VerticalOptions="Center" HorizontalOptions="Center"
+           TextColor="White"
+           FontSize="20"
+           />
+  </StackLayout>
+</ContentPage>

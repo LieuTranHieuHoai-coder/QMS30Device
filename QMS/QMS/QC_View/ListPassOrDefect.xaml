@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="QMS.QC_View.ListPassOrDefect">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="{xct:Translate Detailsofproductdefects}" Grid.Column="0" x:Name="ParentName" HorizontalTextAlignment="Start"
+                   TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="Start"></Label>
+                <Button Text="&#xe5cd;" FontFamily="MaterialIconsOutlinedRegular" HorizontalOptions="EndAndExpand" x:Name="back" Clicked="back_Clicked" BackgroundColor="Red" FontSize="20" WidthRequest="40" HeightRequest="40" TextColor="White"></Button>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" Margin="2,0,2,0">
+                <StackLayout HeightRequest="80" VerticalOptions="Start" Margin="0" Padding="0">
+                    <Grid ColumnDefinitions="*,*,*,*,*,*,*,*" RowDefinitions="*" BackgroundColor="Gray" VerticalOptions="FillAndExpand" Padding="2" ColumnSpacing="2">
+                        <Label Grid.Column="0" Text="{xct:Translate Date}" TextColor="Black" FontSize="15"    VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <!--<Label Grid.Column="1" Text="{xct:Translate SewingLine}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>-->
+                        <Label Grid.Column="1" Text="{xct:Translate Customer}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="2" Text="{xct:Translate Season}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="3" Text="{xct:Translate BuyMonth}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="4" Text="{xct:Translate Style}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <!--<Label Grid.Column="6" Text="{xct:Translate PO}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>-->
+                        <Label Grid.Column="5" Text="{xct:Translate Color}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="6" Text="{xct:Translate Size}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                        <Label Grid.Column="7" Text="{xct:Translate DefectQty}" TextColor="Black" FontSize="15"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightGreen"></Label>
+                    </Grid>
+                </StackLayout>
+                <ScrollView Margin="0" Padding="0">
+                    <StackLayout>
+                        <CollectionView x:Name="DataViewer" EmptyView="{xct:Translate NoData}" SelectionMode="Single" Margin="0">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="*,*,*,*,*,*,*,*" RowDefinitions="*" 
+                                      VerticalOptions="FillAndExpand" BackgroundColor="Gray" 
+                                      Padding="1" ColumnSpacing="1">
+                                        <Label Grid.Column="0" Text="{Binding CreateDated}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="White"></Label>
+                                        <Label Grid.Column="1" Text="{Binding Customer}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="White"></Label>
+                                        <Label Grid.Column="2" Text="{Binding Season}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="White"></Label>
+                                        <Label Grid.Column="3" Text="{Binding BuyMonth}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="White"></Label>
+                                        <Label Grid.Column="4" Text="{Binding Style}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="White"></Label>
+                                        <Label Grid.Column="5" Text="{Binding ColorName}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="White" HorizontalTextAlignment="Center"></Label>
+                                        <Label Grid.Column="6" Text="{Binding SizeName}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="White" HorizontalTextAlignment="Center"></Label>
+                                        <Label Grid.Column="7" Text="{Binding Defect}" TextColor="Black" FontSize="12"   VerticalTextAlignment="Center" BackgroundColor="White" HorizontalTextAlignment="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding Defect}" Value="True">
+                                                    <Setter Property="Text" Value="{xct:Translate Defect}"></Setter>
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Label" Binding="{Binding Defect}" Value="False">
+                                                    <Setter Property="Text" Value="{xct:Translate Pass}"></Setter>
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Label" Binding="{Binding Defect}" Value="True">
+                                                    <Setter Property="BackgroundColor" Value="Red"></Setter>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

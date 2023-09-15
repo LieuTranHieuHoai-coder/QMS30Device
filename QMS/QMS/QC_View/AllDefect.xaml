@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+             x:Class="QMS.AllDefect">
+    <!--<ContentPage.Content>-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"           
+            DurationIn="100"
+            DurationOut="100"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout BackgroundColor="White"
+                 Padding="10" 
+                 Margin="10"
+                 VerticalOptions="Center"
+              >
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="{xct:Translate Enter error code}" Grid.Column="0" x:Name="ParentName"  
+                   TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                <Button Text="&#xe5cd;" Grid.Column="1" FontFamily="MaterialIconsOutlinedRegular" HorizontalOptions="End" VerticalOptions="Start"
+                    FontSize="20" x:Name="close" Clicked="close_Clicked"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="Red" WidthRequest="40" 
+                    HeightRequest="40">
+
+                </Button>
+            </Grid>
+            
+        </StackLayout>
+        <ScrollView>
+            <FlexLayout x:Name="listDefect"  AlignItems="Center" AlignContent="Center" Margin="1"
+                                         BindableLayout.ItemsSource="{Binding defect}"          
+                                         HorizontalOptions="CenterAndExpand"
+                                         Wrap="Wrap"
+                                        >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding DefineCode}" 
+                               Margin="1" Clicked="Defect_Clicked"
+                               BackgroundColor="Green"
+                               WidthRequest="120"
+                               CommandParameter="{Binding .}"
+                               FontSize="15" 
+                               BorderWidth="1" CornerRadius="5"
+                               TextColor="White"></Button>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </StackLayout>
+</pages:PopupPage>

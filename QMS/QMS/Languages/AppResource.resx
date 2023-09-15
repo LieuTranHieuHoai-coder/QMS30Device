@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACCOUNT_PW" xml:space="preserve">
+    <value>Account Or Pw incorrect!</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="beingrepaired" xml:space="preserve">
+    <value>being repaired</value>
+  </data>
+  <data name="BuyMonth" xml:space="preserve">
+    <value>Buy Month</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="CheckInternet" xml:space="preserve">
+    <value>Check Internet</value>
+  </data>
+  <data name="CheckQR" xml:space="preserve">
+    <value>Check QR - Repair</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="ChooseFactory" xml:space="preserve">
+    <value>Choose Factory</value>
+  </data>
+  <data name="ChooseSewingLine" xml:space="preserve">
+    <value>Choose SewingLine</value>
+  </data>
+  <data name="ChooseSite" xml:space="preserve">
+    <value>Choose Site</value>
+  </data>
+  <data name="Cleanliness" xml:space="preserve">
+    <value>6-Cleanliness</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ConfirmRepair" xml:space="preserve">
+    <value>Confirm Repair</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="DailyProductionReport" xml:space="preserve">
+    <value>Daily Production Report</value>
+  </data>
+  <data name="DailyReportTitle" xml:space="preserve">
+    <value>DAILY PRODUCTION REPORT</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateRangeInvalid" xml:space="preserve">
+    <value>Invalid date range</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>Defect</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Del</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Detailsofproductdefects" xml:space="preserve">
+    <value>Details Of Product Defects</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="ERROR_TRYAGAIN" xml:space="preserve">
+    <value>ERROR TRY AGAIN</value>
+  </data>
+  <data name="Exceeding_The_Amount" xml:space="preserve">
+    <value>Exceeding The QTY</value>
+  </data>
+  <data name="FabricAccessory" xml:space="preserve">
+    <value>1-Fabric/3-Accessory</value>
+  </data>
+  <data name="Factory" xml:space="preserve">
+    <value>Factory</value>
+  </data>
+  <data name="Finishgood" xml:space="preserve">
+    <value>Finish Good</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Front" xml:space="preserve">
+    <value>Front</value>
+  </data>
+  <data name="Function" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="Img" xml:space="preserve">
+    <value>Img</value>
+  </data>
+  <data name="INPUTINFORMATION" xml:space="preserve">
+    <value>INPUT INFORMATION</value>
+  </data>
+  <data name="InputQR" xml:space="preserve">
+    <value>Input QR</value>
+  </data>
+  <data name="InputQRcode" xml:space="preserve">
+    <value>Input QR</value>
+  </data>
+  <data name="Inside" xml:space="preserve">
+    <value>Inside</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LOGINERROR" xml:space="preserve">
+    <value>LOGIN ERROR</value>
+  </data>
+  <data name="Loginsystem" xml:space="preserve">
+    <value>Login System</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Logo_Label" xml:space="preserve">
+    <value>4-Logo/5-Label</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No data to show</value>
+  </data>
+  <data name="NODEFONGARMENT" xml:space="preserve">
+    <value>No Defect On Garment</value>
+  </data>
+  <data name="NOPICTURE" xml:space="preserve">
+    <value>No Picture</value>
+  </data>
+  <data name="NotFoundQRCode" xml:space="preserve">
+    <value>Not Found QRCode</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>OrderNo</value>
+  </data>
+  <data name="Outside" xml:space="preserve">
+    <value>Outside</value>
+  </data>
+  <data name="PassQty" xml:space="preserve">
+    <value>Pass Qty</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="permissiontothedevice" xml:space="preserve">
+    <value>Grant camera permission to the device.</value>
+  </data>
+  <data name="PO" xml:space="preserve">
+    <value>PO</value>
+  </data>
+  <data name="QCDefect" xml:space="preserve">
+    <value>QC Defect</value>
+  </data>
+  <data name="QCRecieving" xml:space="preserve">
+    <value>QC Recieving</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>QRCode</value>
+  </data>
+  <data name="QRNOTAVAILABLE" xml:space="preserve">
+    <value>QR NOT AVAILABLE</value>
+  </data>
+  <data name="QRPASSED" xml:space="preserve">
+    <value>QR is PASSED</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="QUERYDATA" xml:space="preserve">
+    <value>QUERY DATA</value>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>Repair</value>
+  </data>
+  <data name="RepairGarment" xml:space="preserve">
+    <value>Repair Garment</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="SCANNED" xml:space="preserve">
+    <value>SCANNED</value>
+  </data>
+  <data name="ScanQRcode" xml:space="preserve">
+    <value>Scan QR</value>
+  </data>
+  <data name="ScanQRLogin" xml:space="preserve">
+    <value>ScanQR Login</value>
+  </data>
+  <data name="ScanQRQMS" xml:space="preserve">
+    <value>Scan QR QMS</value>
+  </data>
+  <data name="ScanQRQMSQTY" xml:space="preserve">
+    <value>Scan QR</value>
+  </data>
+  <data name="Seamseal_Bonding" xml:space="preserve">
+    <value>7-Seamseal/Bonding</value>
+  </data>
+  <data name="SearchItem" xml:space="preserve">
+    <value>Search Item...</value>
+  </data>
+  <data name="Season" xml:space="preserve">
+    <value>Season</value>
+  </data>
+  <data name="SelectFactory" xml:space="preserve">
+    <value>Select Factory</value>
+  </data>
+  <data name="SelectLine" xml:space="preserve">
+    <value>Select Line</value>
+  </data>
+  <data name="Semigood" xml:space="preserve">
+    <value>SEMI GOOD</value>
+  </data>
+  <data name="SewingLine" xml:space="preserve">
+    <value>Sewing Line</value>
+  </data>
+  <data name="SewingOutput" xml:space="preserve">
+    <value>Sewing Output</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="UNABLETOGETINFOR" xml:space="preserve">
+    <value>UNABLE TO GET INFOR</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserNameID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Workmanship_SPI" xml:space="preserve">
+    <value>2-Workmanship/9-SPI</value>
+  </data>
+  <data name="WorkNo" xml:space="preserve">
+    <value>WorkNo</value>
+  </data>
+  <data name="YesToConfirm" xml:space="preserve">
+    <value>Yes To Confirm</value>
+  </data>
+  <data name="YesToPass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="OVERQTY_NOTSAVE" xml:space="preserve">
+    <value>OVER QTY.NOT SAVE</value>
+  </data>
+  <data name="YesToFinish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="FG" xml:space="preserve">
+    <value>FG</value>
+  </data>
+  <data name="PACKING" xml:space="preserve">
+    <value>PACKING</value>
+  </data>
+  <data name="SEMI" xml:space="preserve">
+    <value>SEMI</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Delete Success</value>
+  </data>
+  <data name="Dontfixthisdefect" xml:space="preserve">
+    <value>Stop fix this defect</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="NoWorkersToFix" xml:space="preserve">
+    <value>There are no workers to fix errors</value>
+  </data>
+  <data name="QCJob" xml:space="preserve">
+    <value>QC Job</value>
+  </data>
+  <data name="C_Grade" xml:space="preserve">
+    <value>C Grade</value>
+  </data>
+  <data name="Invalid Username or Password" xml:space="preserve">
+    <value>Invalid Username or Password</value>
+  </data>
+  <data name="ConfirmRework" xml:space="preserve">
+    <value>Confirm Rework</value>
+  </data>
+  <data name="Numberofremakes" xml:space="preserve">
+    <value>Number of remakes:</value>
+  </data>
+  <data name="switch camera" xml:space="preserve">
+    <value>Switch Camera</value>
+  </data>
+  <data name="QtyScan" xml:space="preserve">
+    <value>Quantity Scan</value>
+  </data>
+  <data name="AddNewSuccess" xml:space="preserve">
+    <value>Add New Success</value>
+  </data>
+  <data name="change line" xml:space="preserve">
+    <value>Change line</value>
+  </data>
+  <data name="enter error information" xml:space="preserve">
+    <value>Enter Error Information</value>
+  </data>
+  <data name="catch the error" xml:space="preserve">
+    <value>Catch the error</value>
+  </data>
+  <data name="defect search" xml:space="preserve">
+    <value>Defect Search</value>
+  </data>
+  <data name="Enter error code" xml:space="preserve">
+    <value>Enter error code</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Selected: </value>
+  </data>
+  <data name="Add DetaiQcQrCode failed" xml:space="preserve">
+    <value>Add DetaiQcQrCode failed</value>
+  </data>
+  <data name="Add ProductionProcess failed" xml:space="preserve">
+    <value>Add ProductionProcess failed</value>
+  </data>
+  <data name="C grade" xml:space="preserve">
+    <value>C grade</value>
+  </data>
+  <data name="Passed product. Do you want to fix it?" xml:space="preserve">
+    <value>Passed product. Do you want to fix it?</value>
+  </data>
+  <data name="product passed" xml:space="preserve">
+    <value>Product passed</value>
+  </data>
+  <data name="Qc is checking" xml:space="preserve">
+    <value>Qc is checking</value>
+  </data>
+  <data name="Shirt C. Do you want to Recycle ?" xml:space="preserve">
+    <value>Shirt C. Do you want to Recycle ?</value>
+  </data>
+  <data name="color and size have not been entered" xml:space="preserve">
+    <value>Color and size have not been entered</value>
+  </data>
+  <data name="error fixed" xml:space="preserve">
+    <value>Error fixed</value>
+  </data>
+  <data name="Return failed" xml:space="preserve">
+    <value>Return failed</value>
+  </data>
+  <data name="Return successful" xml:space="preserve">
+    <value>Return successful</value>
+  </data>
+  <data name="worker is fixing" xml:space="preserve">
+    <value>Worker is fixing</value>
+  </data>
+  <data name="give back" xml:space="preserve">
+    <value>Give back</value>
+  </data>
+  <data name="QcCheckAgain" xml:space="preserve">
+    <value>ReCheck</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Mid" xml:space="preserve">
+    <value>Mid</value>
+  </data>
+  <data name="MidLeft" xml:space="preserve">
+    <value>MidLeft</value>
+  </data>
+  <data name="MidRight" xml:space="preserve">
+    <value>MidRight</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="LeftRight" xml:space="preserve">
+    <value>Left+Right</value>
+  </data>
+  <data name="Repalce Fabric" xml:space="preserve">
+    <value>Repalce Fabric</value>
+  </data>
+  <data name="PassRFT" xml:space="preserve">
+    <value>Pass (RFT)</value>
+  </data>
+  <data name="DefectQty" xml:space="preserve">
+    <value>Defect Qty</value>
+  </data>
+  <data name="passpercentage" xml:space="preserve">
+    <value>Pass Rate</value>
+  </data>
+  <data name="ByDefectCode" xml:space="preserve">
+    <value>By Code</value>
+  </data>
+  <data name="defectpercentage" xml:space="preserve">
+    <value>Defect Rate</value>
+  </data>
+</root>

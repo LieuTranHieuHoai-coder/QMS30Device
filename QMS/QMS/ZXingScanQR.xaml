@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:gv="clr-namespace:BarcodeScanner.Mobile;assembly=BarcodeScanner.Mobile.XamarinForms"
+             x:Class="QMS.ZXingScanQR">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" >
+            <StackLayout  HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+                <!--<Label Text="{xct:Translate ScanQRQMSQTY}" 
+                       FontSize="Medium" 
+                       FontAttributes="Bold"                       
+                       HorizontalOptions="Center"
+                       TextColor="Blue"/>-->
+                <Button Text="Switch Camera" HorizontalOptions="End" x:Name="btnswitch" Clicked="btnswitch_Clicked" 
+                        BackgroundColor="Cyan"
+                        ImageSource="returnDefect" 
+                        CornerRadius="5" 
+                        BorderColor="Black" 
+                        BorderWidth="2"
+                        Margin="0,0,5,5"/>
+            </StackLayout>
+            <Frame Padding="5" Margin="5" BackgroundColor="#83be62" BorderColor="Green" CornerRadius="5">
+                <ScrollView>
+                    
+                    <gv:CameraView x:Name="CameraScanner" CameraFacing="Front" OnDetected="CameraScanner_OnDetected"
+                                   HeightRequest="450"></gv:CameraView>
+                </ScrollView>
+            </Frame>
+            
+
+            <Frame Padding="5" Margin="5" BackgroundColor="#83be62" BorderColor="Green" CornerRadius="5">
+                <StackLayout >
+                    <Label  Text="{xct:Translate InputQR}" 
+                            TextColor="Black"  
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            ></Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Frame BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" >
+                            <Grid HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition ></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="110"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Row="0" Grid.Column="0" />
+                                <Entry x:Name="txtqrcode" 
+                                            PlaceholderColor="Black" 
+                                            Placeholder="{xct:Translate InputQR}"                                           
+                                            Keyboard="Numeric" 
+                                            FontSize="Medium"   
+                                            TextColor="Blue"
+                                            Grid.Row="0" Grid.Column="0"
+                                           HorizontalOptions="FillAndExpand" Completed="btnscan_Clicked"/>
+
+                                <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent"></BoxView>
+
+                                <Frame CornerRadius="10"  
+                                       OutlineColor="White"
+                                       HorizontalOptions="CenterAndExpand"
+                                       WidthRequest="120"
+                                       HeightRequest="20"
+                                       Padding="10"
+                                       BackgroundColor="Cyan"
+                                       Grid.Row="0" Grid.Column="1"
+                                       >
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="btnscan_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="Cyan"
+                                                     HeightRequest="25"                     
+                                                     Padding="0">
+
+                                        <Label Text="{xct:Translate Scan}"
+                                                            FontSize="13"
+                                                            FontAttributes="Bold"
+                                                            HorizontalOptions="Center"
+                                                            TextColor="Red"
+                                                            VerticalOptions="CenterAndExpand"/>
+
+                                        <ImageButton Source="search.png"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="Cyan"/>
+                                    </StackLayout>
+                                </Frame>
+
+                            </Grid>
+
+                        </Frame>
+                    </StackLayout>
+
+                    <Frame CornerRadius="10"  
+                                       OutlineColor="Red"
+                                       HorizontalOptions="FillAndExpand"                                       
+                                       HeightRequest="30"
+                                       Padding="10"
+                           BackgroundColor="Yellow"
+                                       Grid.Row="0" Grid.Column="1"
+                                       >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="btnBack_Clicked"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="Yellow"
+                                         HeightRequest="25"
+                     
+                                         Padding="0">
+
+                            <Label Text="{xct:Translate Back}"
+                                           FontSize="15"
+                                   
+                                           FontAttributes="Bold"
+                                           TextColor="Black"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+
+                            <ImageButton Source="leftarrow.png"
+                                         HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                         WidthRequest="15"
+                                         BackgroundColor="Yellow"/>
+                        </StackLayout>
+                    </Frame>
+                   
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

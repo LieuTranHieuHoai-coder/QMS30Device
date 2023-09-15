@@ -49,7 +49,7 @@ namespace QMS
         //    StrokeJoin = SKStrokeJoin.Round
         //};
         private string QRCodeNumber { get; set; }
-
+        private string _key { get; set; }
         public List<DefectPositionView> defectPositionViews = new List<DefectPositionView>();
         public ProductionDefect()
         {
@@ -100,6 +100,23 @@ namespace QMS
             showDefectList(QRCodeNumber);
             //getImage();
         }
+        public ProductionDefect(string qrcodedata,string key)
+        {
+            InitializeComponent();
+            //  btnSave.IsVisible = false;
+            // photo.IsVisible = false;
+            Commons.GlobalDefines.DotFailLV_0 = null;
+            Commons.GlobalDefines.DotFailLV_1 = null;
+            Commons.GlobalDefines.DotFail_In_Out = null;
+            Commons.GlobalDefines.BtnPhotoStatus = false;
+            QRCodeNumber = qrcodedata;
+            _key = key;
+            //getInfo();
+            CountRework();
+            //getDefectInfo();
+            showDefectList(QRCodeNumber);
+            //getImage();
+        }
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -126,7 +143,15 @@ namespace QMS
 
         private async void btnback_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new InputDefect());
+            if (_key == "recheck")
+            {
+                await Navigation.PushModalAsync(new ZXingScanDefect());
+            }
+            else
+            {
+                await Navigation.PushModalAsync(new InputDefect());
+            }
+            
         }
 
         private void btnDefect_Clicked(object sender, EventArgs e)

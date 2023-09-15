@@ -62,7 +62,7 @@ namespace QMS
                             else
                             {
                                 var resultQcScan = await client.GetAsync(Commons.GlobalDefines.NewApiUrl + "/qc/report/UpdateQcScanner?qrCode=" + result + "&uid=" + Commons.GlobalDefines.LoggedUser.Uid);
-                                await Navigation.PushModalAsync(new ProductionDefect(result));
+                                await Navigation.PushModalAsync(new ProductionDefect(result,"recheck"));
                             }
 
                         });

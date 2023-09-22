@@ -141,19 +141,16 @@
                             FontAttributes="Bold" FontSize="15" 
                             HeightRequest="60"
                             TextColor="Black"></Button>
-                        <Button BackgroundColor="Green" WidthRequest="250"
+                        <Button BackgroundColor="Red" WidthRequest="250"
                                  Grid.Column="1"
                                 x:Name="back" Clicked="back_Clicked" 
                                 
-                                BorderColor="Green" BorderWidth="1" 
-                                Text="{xct:Translate Back}" 
+                                BorderColor="Red" BorderWidth="1" 
+                                Text="{xct:Translate Close}" 
                                 FontAttributes="Bold" FontSize="15" 
                                 HeightRequest="60"
                                 IsVisible="true"
                                 TextColor="White"></Button>
-                        
-                        
-                        
                     </Grid>
                 </StackLayout>
                 <Button BackgroundColor="Green" 

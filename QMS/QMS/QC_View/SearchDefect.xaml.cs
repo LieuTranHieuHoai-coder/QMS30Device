@@ -105,7 +105,7 @@ namespace QMS.QC_View
 
         private async void back_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ProductionDefect(Commons.GlobalDefines.QcQrCode));
+            await Navigation.PushModalAsync(new PopupFunction());
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -478,6 +478,11 @@ namespace QMS.QC_View
         private void Continue_Clicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new InputDefect());
+        }
+
+        private void modify_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new ProductionDefect(Commons.GlobalDefines.QcQrCode,"search"));
         }
     }
 }

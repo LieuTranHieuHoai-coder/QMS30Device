@@ -203,11 +203,11 @@
             
             <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
                 <Button BackgroundColor="Green" 
-                                x:Name="back" Clicked="back_Clicked" 
+                                x:Name="modify" Clicked="modify_Clicked" 
                                 WidthRequest="250"
                                 VerticalOptions="End"
                                 BorderColor="Green" BorderWidth="1" 
-                                Margin="0" Text="{xct:Translate Back}" 
+                                Margin="0" Text="{xct:Translate Repair}" 
                                 FontAttributes="Bold" FontSize="15" 
                                 HeightRequest="60"
                                 TextColor="White">
@@ -224,6 +224,16 @@
                 </Button>
             </StackLayout>
             
+                <Button BackgroundColor="Red" 
+                                x:Name="back" Clicked="back_Clicked" 
+                                VerticalOptions="End"
+                                BorderColor="Red" BorderWidth="1" 
+                                Margin="0" Text="{xct:Translate Close}" 
+                                FontAttributes="Bold" FontSize="15" 
+                                HeightRequest="60"
+                                TextColor="White">
+                </Button>
+                
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

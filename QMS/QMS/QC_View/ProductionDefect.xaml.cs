@@ -147,9 +147,13 @@ namespace QMS
             {
                 await Navigation.PushModalAsync(new ZXingScanDefect());
             }
+            if (_key == "search")
+            {
+                await Navigation.PushModalAsync(new SearchDefect());
+            }
             else
             {
-                await Navigation.PushModalAsync(new InputDefect());
+                await Navigation.PushModalAsync(new PopupFunction());
             }
             
         }

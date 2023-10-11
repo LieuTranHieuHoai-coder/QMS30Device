@@ -26,5 +26,6 @@ namespace QMS.Models.QcModels
 		public string ModifyUser { get; set; }
 		public DateTime ModifyDated { get; set; }
 		public int DirectID { get; set; }
+		public int Pcode { get; set; }
 	}
 }

@@ -13,6 +13,6 @@ namespace QMS.ViewModels
         public string BuyMonth { get; set; }
         public string StartDate { get; set; }
         public string PlanNo { get; set; }
-
+        public string OrderNo { get; set; }
     }
 }

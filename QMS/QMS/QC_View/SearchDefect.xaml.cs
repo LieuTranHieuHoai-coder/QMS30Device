@@ -154,7 +154,8 @@ namespace QMS.QC_View
                         Status = "A",
                         CreateUser = Commons.GlobalDefines.LoggedUser.Uid,
                         CreateDated = DateTime.Now,
-                        DirectID = Commons.GlobalDefines.DirectionID
+                        DirectID = Commons.GlobalDefines.DirectionID,
+                        Pcode = Commons.GlobalDefines.Pcode
                     };
                     var client = new HttpClient();
                     var json = JsonConvert.SerializeObject(defect);

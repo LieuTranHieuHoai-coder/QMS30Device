@@ -184,7 +184,7 @@ namespace QMS.QC_View
                         Customer = Commons.GlobalDefines.Customer,
                         BuyMonth = Commons.GlobalDefines.BuyMonth,
                         Season = Commons.GlobalDefines.Season,
-                        OrderNo = "",
+                        OrderNo = Commons.GlobalDefines.QcOrderNo,
                         SewingLine = PkSewingline.Items[PkSewingline.SelectedIndex].ToString(),
                         StyleID = 0,
                         Pass = 1,
@@ -233,7 +233,7 @@ namespace QMS.QC_View
             {
                 Commons.GlobalDefines.Planno = info[PkStyle.SelectedIndex].PlanNo;
                 Commons.GlobalDefines.Style = info[PkStyle.SelectedIndex].Style;
-                
+                Commons.GlobalDefines.QcOrderNo = info[PkStyle.SelectedIndex].OrderNo;
                 customer.Text = info[PkStyle.SelectedIndex].Customer;
                 buyMonth.Text = info[PkStyle.SelectedIndex].BuyMonth;
                 Commons.GlobalDefines.Customer = customer.Text;

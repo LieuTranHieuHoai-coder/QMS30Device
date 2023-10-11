@@ -120,7 +120,7 @@ namespace QMS
                                     Customer = Commons.GlobalDefines.Customer,
                                     BuyMonth = Commons.GlobalDefines.BuyMonth,
                                     Season = Commons.GlobalDefines.Season,
-                                    OrderNo = "",
+                                    OrderNo = Commons.GlobalDefines.QcOrderNo,
                                     SewingLine = Commons.GlobalDefines.WorkingLine,
                                     StyleID = 1,
                                     Defect = 1,
@@ -362,7 +362,7 @@ namespace QMS
                                             Customer = Commons.GlobalDefines.Customer,
                                             BuyMonth = Commons.GlobalDefines.BuyMonth,
                                             Season = Commons.GlobalDefines.Season,
-                                            OrderNo = "",
+                                            OrderNo = Commons.GlobalDefines.QcOrderNo,
                                             SewingLine = Commons.GlobalDefines.WorkingLine,
                                             StyleID = 1,
                                             Defect = 1,
@@ -381,7 +381,7 @@ namespace QMS
                                         {
                                             var resultNewRow = await newRow.Content.ReadAsStringAsync();
                                             var dataNewRow = JsonConvert.DeserializeObject<DetailQcQrCode>(resultNewRow);
-
+                                            Commons.GlobalDefines.Pcode = int.Parse(dataNewRow.Pcode);
                                             DetailQcQrCode qrCode = new DetailQcQrCode()
                                             {
                                                 Pcode = dataNewRow.Pcode,

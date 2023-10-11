@@ -21,8 +21,8 @@ namespace QMS.Commons
         public static string SlectedPerm { get; set; }
        
         public static string ApiBaseUrl = "http://qvnqms.qve.com.vn";
-        public static string NewApiUrl = "http://192.168.1.46:9999";
-        //public static string NewApiUrl = "http://192.168.1.136:9999";
+        //public static string NewApiUrl = "http://192.168.1.46:9999";
+        public static string NewApiUrl = "http://192.168.1.136:9999";
         
         public static List<Models.PermitModels.AdminGroupPerm> Permisions { get; set; }
         public static string Language = LocalizationResourceManager.Current.CurrentCulture.Name.ToLower();
@@ -53,6 +53,8 @@ namespace QMS.Commons
         public static string RpFromDate { get; set; }
         public static string RpToDate { get; set; }
         public static string RpSew { get; set; }
+        public static string QcOrderNo { get; set; }
+        public static int Pcode { get; set; }
         // end Qc object
         public static void ClearAll()
         {
